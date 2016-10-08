@@ -1,2 +1,10 @@
-
+.git/
+node_modules/
 node_modules
+.idea/
+
+*.map
+
+.vscode/launch.json
+
+jsconfig.json
