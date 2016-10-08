@@ -1,0 +1,103 @@
+var gulp = require('gulp');
+var $ = require('gulp-load-plugins')();
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+var spriter = require('gulp-css-spriter');
+
+var paths = {
+    html: {
+        entry: './src/html/*.*',
+        all: 'src/html/**/*.*'
+    },
+    sass: {
+        entry: './src/css/*.scss',
+        all: 'src/css/**/*.scss'
+    },
+    js: {
+        entry: './src/js/*.js',
+        all: 'src/js/**/*.js'
+    }
+}
+
+// var webpackcfg = require('./webpack.config.js')(paths);
+
+//copy file to src folder
+gulp.task('copy', function () {
+    // lib
+    gulp.src('./src/lib/**/*')
+        .pipe(gulp.dest('./dist/lib/'));
+
+    // images
+    gulp.src('./src/images/**/*')
+        .pipe(gulp.dest('./dist/images/'));
+
+});
+//compile swig file
+gulp.task('html', function () {
+    gulp.src(paths.html.entry)
+        .pipe($.nunjucks.compile())
+        .pipe(gulp.dest('./dist/html'))
+});
+//compile sass file
+gulp.task('sass', function () {
+    gulp.src(paths.sass.entry)
+        .pipe($.sourcemaps.init())
+        .pipe($.sass().on('error', $.sass.logError))
+        .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe($.sourcemaps.write('./'))
+        .pipe(spriter({
+            // The path and file name of where we will save the sprite sheet
+            'spriteSheet': './dist/images/spritesheet.png',
+            // Because we don't know where you will end up saving the CSS file at this point in the pipe,
+            // we need a litle help identifying where it will be.
+            'pathToSpriteSheetFromCSS': '../images/spritesheet.png'
+        }))
+        .pipe(gulp.dest('./dist/css/'))
+        .pipe(reload({
+            stream: true
+        }));
+
+});
+//compile js file
+gulp.task('js', function () {
+    gulp.src(paths.js.entry)
+        .pipe($.sourcemaps.init())
+        // .pipe($.babel({
+        //     presets: ['es2015']
+        // }))
+        .pipe($.sourcemaps.write('./'))
+        .pipe(gulp.dest('dist/js/'))
+});
+//listen file modify
+gulp.task('watch', function () {
+
+    browserSync.init({
+        //任何文件改变就刷新
+        // files: "**", 
+
+        notify: false,
+
+        //指定文件改变刷新
+        files: ["./dist/**/*.html", "./dist/**/*.js"],
+
+        // 动态站点
+        // proxy: "localhost:8080/xxx/index.action"
+
+        // 静态站点
+        server: {
+            baseDir: "./dist/",
+            directory: true, //在网页显示项目文件结构
+            index: "html/index.html"
+        }
+    })
+
+    gulp.watch(paths.html.all, ['html']);
+    gulp.watch(paths.sass.all, ['sass']);
+    gulp.watch(paths.js.all, ['js']);
+})
+
+var commTask = ['copy', 'html', 'sass', 'js'];
+
+gulp.task('dev', commTask.concat('watch'));
+gulp.task('build', commTask);
+gulp.task('default', ['dev']);

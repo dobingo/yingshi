@@ -1,0 +1,41 @@
+@import "./layout/public.scss";
+.center-tab {
+    justify-content: center;
+    align-items: center;
+    .tab-link {
+        width: 68px !important;
+        color: $ui-color-text;
+    }
+    .icon-search {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+    }
+}
+
+.swiper-container {
+    .swiper-slide {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 44px;
+    input{
+        width: 311px;
+        border-radius: 4px;
+        background: rgba($color: black, $alpha: .08);
+        font-size: 12px;
+        border:0;
+        padding: 8px;
+    }
+    .search-btn{
+        font-size: 14px;
+        color: $ui-color;
+    }
+}

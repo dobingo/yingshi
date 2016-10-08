@@ -1,0 +1,55 @@
+@import "./layout/public.scss";
+// ------ ui ------
+// body{
+//     background: rgba($color: #fff, $alpha: 0.87);
+// }
+
+
+
+.buttons-tab {
+    .button.active {
+        color: $ui-color-title;
+        border-color: $ui-color;
+    }
+}
+
+.icon-search {
+    width: 24px;
+    height: 24px;
+    background: url('../images/icon/search.png') no-repeat;
+}
+
+.icon {
+    border: 0;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+// 浮动
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+// banner
+.swiper-container {
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 2px;
+        background: #fff;
+        opacity: .5;
+        border-radius: 100px;
+    }
+    .swiper-pagination-bullet-active {
+        width: 24px;
+        opacity: 1;
+    }
+}
