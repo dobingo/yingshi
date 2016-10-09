@@ -137,6 +137,9 @@
 .recommended-2 .box1 {
 	display: block;
 	color: rgba(0, 0, 0, 0.87);
+	margin-bottom: .8rem;
+	padding-bottom: .8rem;
+	border-bottom: 1px solid #ddd;
 }
 
 .recommended-2 .box1 .imgbox {
@@ -156,15 +159,6 @@
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
-}
-
-.recommended-2 .box1 .content-text::after {
-	content: '';
-	width: 100%;
-	margin: 16px 0;
-	background: rgba(0, 0, 0, 0.24);
-	display: block;
-	height: 1px;
 }
 
 .recommended-2 .box2 {
@@ -213,9 +207,15 @@
 }
 
 .hot li {
-	padding-bottom: 16px;
-	margin-bottom: 16px;
-	border-bottom: 1px #ddd solid;
+	margin-bottom: .8rem;
+	padding-bottom: .8rem;
+	border-bottom: 1px solid #ddd;
+}
+
+.hot li:last-of-type {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: 0;
 }
 
 .hot .flexlist {
