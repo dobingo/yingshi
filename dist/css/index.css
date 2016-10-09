@@ -97,6 +97,10 @@
 	position: relative;
 }
 
+.recommended-1 .list li a {
+	position: relative;
+}
+
 .recommended-1 .list li img {
 	width: 80px;
 	height: 112px;
@@ -105,15 +109,19 @@
 .recommended-1 .list li .name {
 	font-size: .6rem;
 	position: absolute;
-	top: 80px;
-	left: 2px;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
 	color: #fff;
+	background-image: linear-gradient(-180deg, transparent 0%, rgba(0, 0, 0, 0.87) 100%);
 }
 
 .recommended-1 .list li .text {
 	display: block;
 	font-size: .6rem;
 	margin: 0;
+	color: #000;
 	text-overflow: ellipsis;
 	white-space: normal;
 	word-break: break-all;
@@ -127,11 +135,17 @@
 	font-size: .6rem;
 }
 
+.recommended-2 .box1 {
+	display: block;
+	color: rgba(0, 0, 0, 0.87);
+}
+
 .recommended-2 .box1 .imgbox {
 	height: 114px;
 }
 
 .recommended-2 .box1 .content-text {
+	color: rgba(0, 0, 0, 0.54);
 	text-overflow: ellipsis;
 	white-space: normal;
 	word-break: break-all;
@@ -171,13 +185,16 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	right: 0;
 	color: #fff;
 	font-size: .6rem;
 	margin: 0;
-	padding-left: 4px;
+	padding: 4px;
+	background-image: linear-gradient(-180deg, transparent 0%, rgba(0, 0, 0, 0.87) 100%);
 }
 
 .recommended-2 .box2 .content-text {
+	color: rgba(0, 0, 0, 0.87);
 	text-overflow: ellipsis;
 	white-space: normal;
 	word-break: break-all;
@@ -189,49 +206,53 @@
 }
 
 .hot li {
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+	border-bottom: 1px #ddd solid;
+}
+
+.hot .flexlist {
 	display: -ms-flexbox;
 	display: flex;
 	height: 112px;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	line-height: .9rem;
-	padding-bottom: 16px;
-	margin-bottom: 16px;
-	border-bottom: 1px #ddd solid;
-	box-sizing: content-box;
 }
 
-.hot li:last-of-type {
+.hot .flexlist:last-of-type {
 	border: 0;
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
 
-.hot li .imgbox {
+.hot .flexlist .imgbox {
 	height: 100%;
 	width: 22%;
 }
 
-.hot li .info {
+.hot .flexlist .info {
 	width: 75%;
 }
 
-.hot li .info .t {
+.hot .flexlist .info .t {
 	margin: 0;
 	font-size: .8rem;
+	color: rgba(0, 0, 0, 0.87);
 }
 
-.hot li .info .t .index {
+.hot .flexlist .info .t .index {
 	color: #FF9800;
 	margin-right: 8px;
 }
 
-.hot li .info .text {
+.hot .flexlist .info .text {
 	font-size: .6rem;
 	margin: .4rem 0;
+	color: rgba(0, 0, 0, 0.54);
 }
 
-.hot li .info .text2 {
+.hot .flexlist .info .text2 {
 	font-size: .6rem;
 	color: #FF9800;
 }
