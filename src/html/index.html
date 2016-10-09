@@ -8,39 +8,29 @@
 
 
 {% block main %}
-<div class="content">
+<div class="content-main">
+
+    <!--tab-->
     <div class="buttons-tab center-tab">
         <a href="#tab1" class="tab-link active button">热门</a>
         <a href="#tab2" class="tab-link button">排行</a>
         <button type="button" class="icon icon-search"></button>
-    </div>
-    <div class="search">
-        <input type="text" name="" value="" placeholder="请输入影片关键字">
-        <a href="#" class="search-btn">搜索</a>
-    </div>
-    <div class="tabs">
-        <div id="tab1" class="tab active">
-            <!-- Slider -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../images/index-banner.jpg"
-                            alt=""></div>
-                    <div class="swiper-slide"><img src="../images/index-banner.jpg"
-                            alt=""></div>
-                    <div class="swiper-slide"><img src="../images/index-banner.jpg"
-                            alt=""></div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <!--<div class="swiper-scrollbar"></div>-->
-            </div>
-            <div class="content-block">
-                    
-            </div>
+        <div class="search">
+            <input type="text" placeholder="请输入影片关键字">
+            <a href="#" class="search-btn">搜索</a>
         </div>
+    </div>
+
+    <!--tab内容-->
+    <div class="tabs">
+        <!--热门-->
+        <div id="tab1" class="tab active">
+            {% include "./index/hot.html"%}
+        </div>
+
+        <!--排行-->
         <div id="tab2" class="tab">
-            <div class="content-block">
-                <p>This is tab 2 content</p>
-            </div>
+            {% include "./index/ranking.html"%}
         </div>
     </div>
 </div>

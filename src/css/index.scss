@@ -1,4 +1,15 @@
 @import "./layout/public.scss";
+@mixin line() {
+    &::after {
+        content: '';
+        width: 100%;
+        margin: 16px 0;
+        background: rgba(0, 0, 0, 0.24);
+        display: block;
+        height: 1px;
+    }
+}
+
 .center-tab {
     justify-content: center;
     align-items: center;
@@ -21,21 +32,178 @@
     }
 }
 
-.search{
+.search {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: absolute;
+    right: 0;
+    top: 44px;
+    width: 0;
     height: 44px;
-    input{
-        width: 311px;
+    z-index: 10;
+    background: #eee;
+    transition: .3s;
+    opacity: 0;
+    input {
+        width: 80%;
         border-radius: 4px;
         background: rgba($color: black, $alpha: .08);
-        font-size: 12px;
-        border:0;
+        font-size: .6rem;
+        border: 0;
         padding: 8px;
     }
-    .search-btn{
-        font-size: 14px;
+    .search-btn {
+        font-size: .7rem;
         color: $ui-color;
+    }
+}
+
+.search-show {
+    opacity: 1;
+    width: 100%;
+}
+
+.content-title {
+    font-size: .7rem;
+    text-align: left;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.panel {
+    background: #fff;
+    box-shadow: 0 1px 1px rgba($color: black, $alpha: 0.03);
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0 16px 16px;
+}
+
+.imgbox {
+    // margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    img {
+        // max-height: 100%;
+    }
+}
+
+// 精品推荐
+.recommended-1 {
+    padding-bottom: 16px;
+    padding-right: 0;
+    .list {
+        white-space: nowrap;
+        display: block;
+        overflow: auto;
+        li {
+            width: 80px;
+            display: inline-block;
+            overflow: hidden;
+            margin-right: 10px;
+            position: relative;
+            img {
+                width: 80px;
+                height: 112px;
+            }
+            .name {
+                font-size: .6rem;
+                position: absolute;
+                top: 80px;
+                left: 2px;
+                color: #fff;
+            }
+            .text {
+                display: block;
+                font-size: .6rem;
+                // height: 32px;
+                margin: 0;
+                @include text-clamp(2);
+            }
+        }
+    }
+}
+
+// 主打推荐
+.recommended-2 {
+    .content-text {
+        font-size: .6rem;
+    }
+    .box1 {
+        .imgbox {
+            height: 114px;
+        }
+        .content-text {
+            @include text-clamp(3);
+            @include line;
+        }
+    }
+    .box2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        li {
+            width: 48%;
+            overflow: hidden;
+        }
+        .imgbox {
+            height: 92px;
+            p {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: #fff;
+                font-size: .6rem;
+                margin: 0;
+                padding-left: 4px;
+            }
+        }
+        .content-text {
+            @include text-clamp(1);
+            padding-top: .6rem;
+        }
+    }
+}
+
+// 今日热门
+.hot {
+    li {
+        display: flex;
+        height: 112px;
+        justify-content: space-between;
+        line-height: .9rem;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        border-bottom: 1px #ddd solid;
+        box-sizing: content-box;
+        &:last-of-type{
+            border:0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .imgbox {
+            // width: 80px;
+            height: 100%;
+            width: 22%;
+        }
+        .info {
+            width: 75%;
+            .t {
+                margin: 0;
+                font-size: .8rem;
+                .index {
+                    color: $ui-color;
+                    margin-right: 8px;
+                }
+            }
+            .text {
+                font-size: .6rem;
+                margin: .4rem 0;
+            }
+            .text2 {
+                font-size: .6rem;
+                color: $ui-color;
+            }
+        }
     }
 }

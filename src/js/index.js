@@ -1,4 +1,5 @@
 $(function () {
+
     $(".swiper-container").swiper({
 
         // direction: 'vertical',
@@ -16,4 +17,10 @@ $(function () {
         // 如果需要滚动条
         // scrollbar: '.swiper-scrollbar',
     });
+
+
+    // 搜索按钮
+    $('.icon-search').click(function(){
+        $('.search').toggleClass('search-show');
+    })
 });

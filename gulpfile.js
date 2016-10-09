@@ -16,6 +16,9 @@ var paths = {
     js: {
         entry: './src/js/*.js',
         all: 'src/js/**/*.js'
+    },
+    images:{
+        all: 'src/images/**/*.js'
     }
 }
 
@@ -94,6 +97,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.html.all, ['html']);
     gulp.watch(paths.sass.all, ['sass']);
     gulp.watch(paths.js.all, ['js']);
+    gulp.watch(paths.images.all, ['copy']);
 })
 
 var commTask = ['copy', 'html', 'sass', 'js'];

@@ -1,10 +1,28 @@
 @import "./layout/public.scss";
+// 关于rem
+// 12px = .6rem
+// 14px = .7rem
+// 16px = .8rem
+// 18px = .9rem
+// 20px = 1rem
 // ------ ui ------
-// body{
-//     background: rgba($color: #fff, $alpha: 0.87);
-// }
+body{
+    overflow: auto;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.content-main{
+    overflow: hidden;
+}
 
 
+.hide{
+    display: none !important;
+}
 
 .buttons-tab {
     .button.active {

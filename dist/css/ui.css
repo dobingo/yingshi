@@ -1,3 +1,22 @@
+body {
+	overflow: auto;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.content-main {
+	overflow: hidden;
+}
+
+.hide {
+	display: none !important;
+}
+
 .buttons-tab .button.active {
 	color: rgba(0, 0, 0, 0.87);
 	border-color: #FF9800;
