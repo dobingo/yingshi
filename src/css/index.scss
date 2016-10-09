@@ -82,12 +82,14 @@
     padding: 0 16px 16px;
 }
 
+// 图片盒
 .imgbox {
-    // margin: 0 auto;
     overflow: hidden;
     position: relative;
+    // 劲量做到图片自适应
     img {
-        // max-height: 100%;
+        min-width: 100%;
+        max-height: 100%;
     }
 }
 

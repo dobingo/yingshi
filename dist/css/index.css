@@ -78,6 +78,11 @@
 	position: relative;
 }
 
+.imgbox img {
+	min-width: 100%;
+	max-height: 100%;
+}
+
 .recommended-1 {
 	padding-bottom: 16px;
 	padding-right: 0;
