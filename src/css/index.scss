@@ -310,8 +310,12 @@
 // 影视详情
 .details-mov {
     height: 100%;
-    .tools {
+    background: #fff;
+    position: relative;
+    >* {
         width: 100%;
+    }
+    .tools {
         position: fixed;
         z-index: 2;
         top: 0;
@@ -329,7 +333,6 @@
     }
     .detail-content {
         height: 320px;
-        width: 100%;
         position: relative;
         .pic {
             height: 100%;
@@ -355,37 +358,119 @@
             font-size: .6rem;
             padding-left: 16px;
             padding-bottom: 24px;
-            .index{
+            .index {
                 padding: 3px 8px;
                 background: $ui-color;
                 border-radius: 2px;
             }
-            h1{
+            h1 {
                 font-size: 1.1rem;
                 font-weight: normal;
                 margin: 8px 0;
             }
-            .dlist{
+            .dlist {
                 margin: 0;
                 margin-bottom: 4px;
-                &:last-of-type{
+                &:last-of-type {
                     margin-bottom: 0;
                 }
-                .s1{
+                .s1 {
                     color: rgba($color: white, $alpha: .7);
                     margin-right: 8px;
                 }
-                .money{
+                .money {
                     color: $ui-color;
                 }
             }
         }
     }
-    .tabs{
-        .panel{
-            width: 100%;
+    .tabs {
+        overflow: auto;
+        position: absolute;
+        top:360px;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 48px !important;
+        .panel {
+            padding: 16px;
+            margin: 0;
+            font-size: .6rem;
+            .text {
+                text-indent: 1.2rem;
+                margin-bottom: .8rem;
+            }
+        }
+        .num {
+            font-size: .7rem;
+            color: $ui-color;
+            background: #FFF3E0;
+            border-radius: 4px;
+            width: 4rem; //80px
+            height: 2rem;
+            line-height: 2rem;
+            display: block;
+            text-align: center;
+            text-indent: 0;
+            margin-bottom: 8px;
+            margin-right: 8px;
+            float: left;
+        }
+        #detail-tab2 {
+            padding-right: 0;
+        }
+        .other {
+            border: 1px solid rgba($color: black, $alpha: .24);
+            height: 132px;
+            .code {
+                width: 100px;
+                height: 100px;
+                margin-top: 16px;
+                margin-left: 16px;
+            }
+            .infobox {
+                padding: 16px 0;
+                text-align: center;
+                font-size: .6rem;
+                width: 221px;
+                display: inline-block;
+                >p{
+                    margin: 0;
+                    margin-bottom: 8px;
+                }
+                .p1 {
+                    color: $ui-color;
+                }
+                .p2 {
+                    font-size: .7rem;
+                    color: $ui-color-title;
+                }
+                .p3 {
+                    color: $ui-color-text;
+                }
+            }
+        }
+    }
+    .button-group {
+        position: fixed;
+        z-index: 2;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2.4rem; //48px
+        display: flex;
+        .btn {
             height: 100%;
-            margin-bottom: 48px;
+            text-align: center;
+            line-height: 2.4rem;
+            color: white;
+            font-size: .7rem;
+            flex-grow: 1;
+        }
+        .cart {
+            background: $ui-color;
+        }
+        .buy {
+            background: #F36C60;
         }
     }
 }

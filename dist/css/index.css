@@ -345,10 +345,15 @@
 
 .details-mov {
 	height: 100%;
+	background: #fff;
+	position: relative;
+}
+
+.details-mov > * {
+	width: 100%;
 }
 
 .details-mov .tools {
-	width: 100%;
 	position: fixed;
 	z-index: 2;
 	top: 0;
@@ -371,7 +376,6 @@
 
 .details-mov .detail-content {
 	height: 320px;
-	width: 100%;
 	position: relative;
 }
 
@@ -433,10 +437,111 @@
 	color: #FF9800;
 }
 
+.details-mov .tabs {
+	overflow: auto;
+	position: absolute;
+	top: 360px;
+	bottom: 0;
+	left: 0;
+	padding-bottom: 48px !important;
+}
+
 .details-mov .tabs .panel {
-	width: 100%;
+	padding: 16px;
+	margin: 0;
+	font-size: .6rem;
+}
+
+.details-mov .tabs .panel .text {
+	text-indent: 1.2rem;
+	margin-bottom: .8rem;
+}
+
+.details-mov .tabs .num {
+	font-size: .7rem;
+	color: #FF9800;
+	background: #FFF3E0;
+	border-radius: 4px;
+	width: 4rem;
+	height: 2rem;
+	line-height: 2rem;
+	display: block;
+	text-align: center;
+	text-indent: 0;
+	margin-bottom: 8px;
+	margin-right: 8px;
+	float: left;
+}
+
+.details-mov .tabs #detail-tab2 {
+	padding-right: 0;
+}
+
+.details-mov .tabs .other {
+	border: 1px solid rgba(0, 0, 0, 0.24);
+	height: 132px;
+}
+
+.details-mov .tabs .other .code {
+	width: 100px;
+	height: 100px;
+	margin-top: 16px;
+	margin-left: 16px;
+}
+
+.details-mov .tabs .other .infobox {
+	padding: 16px 0;
+	text-align: center;
+	font-size: .6rem;
+	width: 221px;
+	display: inline-block;
+}
+
+.details-mov .tabs .other .infobox > p {
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.details-mov .tabs .other .infobox .p1 {
+	color: #FF9800;
+}
+
+.details-mov .tabs .other .infobox .p2 {
+	font-size: .7rem;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.details-mov .tabs .other .infobox .p3 {
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.details-mov .button-group {
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2.4rem;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.details-mov .button-group .btn {
 	height: 100%;
-	margin-bottom: 48px;
+	text-align: center;
+	line-height: 2.4rem;
+	color: white;
+	font-size: .7rem;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.details-mov .button-group .cart {
+	background: #FF9800;
+}
+
+.details-mov .button-group .buy {
+	background: #F36C60;
 }
 
 /*# sourceMappingURL=index.css.map */
