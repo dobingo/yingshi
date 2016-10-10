@@ -417,6 +417,14 @@
         }
         #detail-tab2 {
             padding-right: 0;
+            .nobuy{
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                font-size: .6rem;
+            }
         }
         .other {
             border: 1px solid rgba($color: black, $alpha: .24);
@@ -446,6 +454,7 @@
                 }
                 .p3 {
                     color: $ui-color-text;
+                    margin: 0;
                 }
             }
         }
