@@ -4,7 +4,6 @@
 }
 
 @mixin splitline ($removelast: false) {
-    margin-bottom: .8rem;
     padding-bottom: .8rem;
     border-bottom: 1px solid #ddd;
     @if $removelast==true {
@@ -27,6 +26,10 @@
         position: absolute;
         right: 12px;
         top: 10px;
+        color: $ui-color;
+        border: 0;
+        background: transparent;
+        font-size: 1rem;
     }
 }
 
@@ -42,32 +45,65 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: absolute;
-    right: 0;
-    top: 44px;
-    width: 0;
     height: 44px;
-    z-index: 10;
-    background: #eee;
     transition: .3s;
-    opacity: 0;
+    overflow: hidden;
     input {
-        width: 80%;
+        flex-grow: 1;
         border-radius: 4px;
         background: rgba($color: black, $alpha: .08);
         font-size: .6rem;
         border: 0;
         padding: 8px;
     }
+    .btn {
+        padding: 6px 12px;
+    }
     .search-btn {
         font-size: .7rem;
         color: $ui-color;
+        width: auto !important;
     }
 }
 
 .search-show {
-    opacity: 1;
-    width: 100%;
+    opacity: 1 !important;
+    width: 100% !important;
+}
+
+.buttons-tab {
+    // 首页上的搜索
+    .search {
+        position: absolute;
+        background: #eee;
+        right: 0;
+        top: 44px;
+        z-index: 10;
+        opacity: 0;
+        width: 0;
+    }
+}
+
+#index-default {
+    .movlist {
+        margin-bottom: 2.5rem;
+    }
+}
+
+#index-search {
+    // 单独的搜索页
+    .search {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: white;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+    }
+    .panel {
+        padding-top: 2.5rem;
+    }
 }
 
 .content-title {
@@ -157,6 +193,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        padding-top: 16px;
         li {
             width: 48%;
             overflow: hidden;
@@ -187,8 +224,9 @@
 }
 
 // 今日热门
-.hot {
+.movlist {
     li {
+        padding-top: .6rem;
         @include splitline(true);
     }
     .flexlist {
@@ -228,6 +266,126 @@
                 font-size: .6rem;
                 color: $ui-color;
             }
+        }
+    }
+}
+
+// 排行
+.ranking {
+    padding-top: 8px;
+    .button-group {
+        $radius: 5px;
+        border: 1px solid $ui-color;
+        border-radius: $radius;
+        height: 28px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        >* {
+            font-size: .6rem;
+            flex-grow: 1;
+            line-height: 28px;
+            text-align: center;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            color: $ui-color;
+            background: #fff;
+            display: block;
+            cursor: pointer;
+            &:first-of-type {
+                border-radius: $radius 0 0 $radius;
+            }
+            &:last-of-type {
+                border-radius: 0 $radius $radius 0;
+            }
+        }
+        .active {
+            background: $ui-color;
+            color: #fff;
+        }
+    }
+}
+
+// 影视详情
+.details-mov {
+    height: 100%;
+    .tools {
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        padding: 0 12px;
+        &>* {
+            color: white;
+            font-size: 24px;
+        }
+    }
+    .detail-content {
+        height: 320px;
+        width: 100%;
+        position: relative;
+        .pic {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+        }
+        .detail-mask {
+            background: rgba($color: black, $alpha: .24);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .info {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            bottom: 0;
+            color: white;
+            font-size: .6rem;
+            padding-left: 16px;
+            padding-bottom: 24px;
+            .index{
+                padding: 3px 8px;
+                background: $ui-color;
+                border-radius: 2px;
+            }
+            h1{
+                font-size: 1.1rem;
+                font-weight: normal;
+                margin: 8px 0;
+            }
+            .dlist{
+                margin: 0;
+                margin-bottom: 4px;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+                .s1{
+                    color: rgba($color: white, $alpha: .7);
+                    margin-right: 8px;
+                }
+                .money{
+                    color: $ui-color;
+                }
+            }
+        }
+    }
+    .tabs{
+        .panel{
+            width: 100%;
+            height: 100%;
+            margin-bottom: 48px;
         }
     }
 }

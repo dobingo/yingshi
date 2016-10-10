@@ -17,24 +17,34 @@ var paths = {
         entry: './src/js/*.js',
         all: 'src/js/**/*.js'
     },
-    images:{
+    images: {
         all: 'src/images/**/*.js'
+    },
+    json:{
+        all: 'src/json/**/*.json'
     }
 }
 
 // var webpackcfg = require('./webpack.config.js')(paths);
 
 //copy file to src folder
-gulp.task('copy', function () {
-    // lib
+gulp.task('copy',['lib','images','json']);
+gulp.task('lib', function () {
     gulp.src('./src/lib/**/*')
         .pipe(gulp.dest('./dist/lib/'));
 
-    // images
+});
+gulp.task('images', function () {
     gulp.src('./src/images/**/*')
         .pipe(gulp.dest('./dist/images/'));
 
 });
+gulp.task('json', function () {
+    gulp.src('./src/json/**/*.json')
+        .pipe(gulp.dest('./dist/json/'));
+
+});
+
 //compile swig file
 gulp.task('html', function () {
     gulp.src(paths.html.entry)
@@ -65,9 +75,9 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     gulp.src(paths.js.entry)
         .pipe($.sourcemaps.init())
-        // .pipe($.babel({
-        //     presets: ['es2015']
-        // }))
+        .pipe($.babel({
+            presets: ['es2015']
+        }))
         .pipe($.sourcemaps.write('./'))
         .pipe(gulp.dest('dist/js/'))
 });
@@ -98,6 +108,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.sass.all, ['sass']);
     gulp.watch(paths.js.all, ['js']);
     gulp.watch(paths.images.all, ['copy']);
+    gulp.watch(paths.json.all, ['json']);
 })
 
 var commTask = ['copy', 'html', 'sass', 'js'];
