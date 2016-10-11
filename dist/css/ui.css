@@ -75,6 +75,10 @@ a:active {
 	color: #FF9800;
 }
 
+.swiper-container {
+	padding-bottom: 0;
+}
+
 .modal-button {
 	color: #FF9800;
 }

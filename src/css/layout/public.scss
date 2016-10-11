@@ -1,8 +1,8 @@
 // ------ public ------
 $ui-color:#FF9800;
-$ui-color-text: rgba(0, 0, 0, 0.54);
-$ui-color-blur: rgba(0, 0, 0, 0.38);
-$ui-color-title: rgba(0, 0, 0, 0.87);
+$ui-color-dark1: rgba(0, 0, 0, 0.87);
+$ui-color-dark2: rgba(0, 0, 0, 0.54);
+$ui-color-dark3: rgba(0, 0, 0, 0.38);
 
 // 文本溢出样式，clamp到多少行溢出时显示缩略字符
 @mixin text-clamp($clamp:1) {

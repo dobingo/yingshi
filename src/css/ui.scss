@@ -50,7 +50,7 @@ ul,li{
 }
 .buttons-tab {
     .button.active {
-        color: $ui-color-title;
+        color: $ui-color-dark1;
         border-color: $ui-color;
     }
 }
@@ -73,6 +73,11 @@ a{
         font-size: .7rem;
         color:$ui-color;
     }
+}
+
+// banner
+.swiper-container{
+    padding-bottom: 0;
 }
 
 // modal

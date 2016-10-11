@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>商城首页</title>
 
-    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <!--<link href="https://cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">-->
-    <!--<link rel="stylesheet" href="../lib/sui/sm.css">-->
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/??sm.min.css,sm-extend.min.css">
     <link rel="stylesheet" href="../css/ui.css">
     
@@ -128,7 +126,7 @@
 <!--主打推荐-->
 <div class="board recommended-2">
     <p class="content-title">主打推荐</p>
-    <a href="#" class="box1">
+    <a href="#index-details-article" class="box1">
         <div class="imgbox">
             <img src="../images/index-banner.jpg" alt="">
         </div>
@@ -452,7 +450,7 @@
 
         <!--影视剧详情-->
         <div class="page" id='index-details-mov'>
-            <div class="details-mov content">
+            <div class="content details">
 
     <!--fixed-->
     <div class="tools">
@@ -509,17 +507,20 @@
             </div>
         </div>
         <div id="detail-tab2" class="tab board">
-            <a href="#" class="num">1</a>
-            <a href="#" class="num">2</a>
-            <a href="#" class="num">3</a>
-            <a href="#" class="num">4</a>
-            <a href="#" class="num">5</a>
-            <a href="#" class="num">6</a>
-            <a href="#" class="num">7</a>
-            <a href="#" class="num">8</a>
-            <a href="#" class="num">9</a>
-            <a href="#" class="num">10</a>
-            <!--<p class="nobuy">提示: 购买后可查看资源地址</p>-->
+            <div class="numbox">
+                <a href="#" class="num">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="num">6</a>
+                <a href="#" class="num">7</a>
+                <a href="#" class="num">8</a>
+                <a href="#" class="num">9</a>
+                <a href="#" class="num">10</a>
+            </div>
+            <!-- 删除numbox就会显示nobuy-->
+            <p class="nobuy">提示: 购买后可查看资源地址</p>
         </div>
         <div id="detail-tab3" class="tab board">
             <div class="sub-tag">
@@ -538,6 +539,42 @@
 
 </div>
         </div>
+
+        <!--文章详情-->
+        <div class="page" id='index-details-article'>
+            <div class="content details details-article">
+
+    <!--<div class="tools">
+        <a class="btn back" href="#"><i class="fa fa-long-arrow-left"></i></a>
+    </div>-->
+
+
+    <div class="board">
+        <h2 class="Title">迷失是一种终身习惯</h2>
+        <div class="time">2016/09/15</div>
+        <div class="text">
+            人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？ 
+            看《迷失东京》前，未曾料想会收获这样一种感觉。看完之后，就想起了《红楼梦》里的话：莫失莫忘，不离不弃。原来人最终不能忘却和离弃的人只是自己。拍电影的人，演电影的人，看电影的人，不过都是为了在里头取悦自己。
+
+            <img src="../images/index-banner.jpg" alt=""> 
+            于是我撞见了自己，过气明星和敏感少女，不过是换了脸谱的另一个自己，辛辛苦苦，粉墨登场，自己演来自己观赏。东京只不过是一个符号，一个场景，人到哪里都在迷失，又无所谓是在东京还是纽约。
+
+            不过是另外一个自己。女主角夏洛特，年轻脸庞，苍老心灵。爱人睡在身边却仿佛隔着千山万水。在巨大陌生的城市里行走，没有目标，失去方向，到处光怪陆离，教人窒息。缺乏安全感的人，走到哪里始终走不出寂寞。也曾遇见可人的画面，温馨的场景，但这一切与自己何关？所谓的许诺与厮守不过坠落成心头的念想、风中的呓语。人生而孤独，这天赋随身携带，日渐扩张，大过天地四季白昼黑夜，大过情人的眼泪和命运的安排，谁都休想夺走这孤独，除非死亡来找你。亦舒说过：谁会免费爱谁一辈子？所谓美好与幸福不过是应了此时心情此时景致，彼一时来如何变幻谁能担当。
+        </div>
+        <p class="clickme">想看片? <span>点我点我</span></p>
+        <div class="other">
+            <img class="code" src="../images/code.jpg" alt="">
+            <div class="infobox">
+                <p class="p1">扫描二维码关注</p>
+                <p class="p2">海量影片，高清资源</p>
+                <p class="p3">更多精彩内容请关注后进入</p>
+                <p class="p3">“影视分销公众号”</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </div>
    
 
     </div>
@@ -545,9 +582,7 @@
 
 
 
-    <script src="../lib/jquery/jquery-3.0.0.min.js"></script>
-    <!--<script src="../lib/sui/sm.js"></script>-->
-    <!--<script src="https://cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.min.js"></script>-->
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script>
         var Zepto = jQuery;
     </script>

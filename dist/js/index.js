@@ -32,7 +32,6 @@ $(function () {
 
             // 如果需要分页器
             pagination: '.swiper-pagination'
-
         });
     }
     initBanner();
@@ -45,12 +44,13 @@ $(function () {
         var $this = $(this);
         // 立即购买
         if ($this.hasClass('buy')) {
-            // $.toast('操作成功，正在跳转...', 2345);
-            $.msg('账户余额不足，请充值或使用微信支付！');
+            $.msg('您还不是会员，无法购买，先长按页面下方二维码成为会员吧！');
         }
 
         // 加入购物车
-        if ($this.hasClass('cart')) {}
+        if ($this.hasClass('cart')) {
+            $.msg('您还不是会员，无法购买，先长按页面下方二维码成为会员吧！');
+        }
     });
 
     // 选集
