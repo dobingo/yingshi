@@ -8,7 +8,6 @@
 
 // reset sui
 body{
-    // overflow: auto;
     .mask{
         position: absolute;
         top: 0;
@@ -66,11 +65,22 @@ a{
     }
 }
 
-// ------ ui ------
-.content-main{
-    // overflow: hidden;
+// 操作表
+.actions-modal-group{
+    margin: 0;
+    .actions-modal-button{
+        line-height: 2.4rem;
+        font-size: .7rem;
+        color:$ui-color;
+    }
 }
 
+// modal
+.modal-button{
+    color:$ui-color;
+}
+
+// ------ ui ------
 
 .hide{
     display: none !important;
@@ -99,7 +109,7 @@ a{
 //     height: 24px;
 //     display: block;
 // }
-// .icon-search {
+// .search-open {
 //     background: url('../images/icon/search.png') no-repeat;
     
 // }

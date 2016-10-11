@@ -16,7 +16,7 @@
                 <div id="tablist" class="buttons-tab center-tab">
                     <a href="#tab1" class="tab-link active button">热门</a>
                     <a href="#tab2" class="tab-link button">排行</a>
-                    <a href="javascript:" class="icon-search fa fa-search"></a>
+                    <a href="javascript:" class="search-open"><i class="fa fa-search"></i></a>
                     <div class="search">
                         <a href="javascript:" class="btn back"></a>
                         <input type="text" placeholder="请输入影片关键字">
@@ -46,102 +46,7 @@
 
         <!--搜索页面-->
         <div class="page" id='index-search'>
-            <div class="content">
-                <div class="search">
-                    <a class="btn back" href="#"><i class="fa fa-long-arrow-left"></i></a>
-                    <input type="text" placeholder="请输入影片关键字">
-                    <a href="javascript:" class="btn search-btn">搜索</a>
-                </div>
-                <div class="board movlist">
-                    <!--搜索电影列表，填充位置-->
-                    <ul>
-                        <li>
-                            <a class="flexlist" href="">
-                                <div class="imgbox">
-                                    <img src="../images/index-banner.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <span class="t"><span class="index">01</span>迷失东京</span>
-                                    <p class="text">人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？看《迷失东京》前，未曾料想会收获这样一种感觉。</p>
-                                    <span class="text2">更新到第3集</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="flexlist" href="">
-                                <div class="imgbox">
-                                    <img src="../images/index-banner.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <span class="t"><span class="index">01</span>迷失东京</span>
-                                    <p class="text">人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？看《迷失东京》前，未曾料想会收获这样一种感觉。</p>
-                                    <span class="text2">更新到第3集</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="flexlist" href="">
-                                <div class="imgbox">
-                                    <img src="../images/index-banner.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <span class="t"><span class="index">01</span>迷失东京</span>
-                                    <p class="text">人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？看《迷失东京》前，未曾料想会收获这样一种感觉。</p>
-                                    <span class="text2">更新到第3集</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="flexlist" href="">
-                                <div class="imgbox">
-                                    <img src="../images/index-banner.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <span class="t"><span class="index">01</span>迷失东京</span>
-                                    <p class="text">人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？看《迷失东京》前，未曾料想会收获这样一种感觉。</p>
-                                    <span class="text2">更新到第3集</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="flexlist" href="">
-                                <div class="imgbox">
-                                    <img src="../images/index-banner.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <span class="t"><span class="index">01</span>迷失东京</span>
-                                    <p class="text">人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？看《迷失东京》前，未曾料想会收获这样一种感觉。</p>
-                                    <span class="text2">更新到第3集</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="flexlist" href="">
-                                <div class="imgbox">
-                                    <img src="../images/index-banner.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <span class="t"><span class="index">01</span>迷失东京</span>
-                                    <p class="text">人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？看《迷失东京》前，未曾料想会收获这样一种感觉。</p>
-                                    <span class="text2">更新到第3集</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="flexlist" href="">
-                                <div class="imgbox">
-                                    <img src="../images/index-banner.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <span class="t"><span class="index">01</span>迷失东京</span>
-                                    <p class="text">人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？看《迷失东京》前，未曾料想会收获这样一种感觉。</p>
-                                    <span class="text2">更新到第3集</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            {% include "./index/search.html"%}
         </div>
 
         <!--影视剧详情-->

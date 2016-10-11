@@ -22,14 +22,18 @@
         width: 68px !important;
         color: $ui-color-blur;
     }
-    .icon-search {
+    .search-open {
         position: absolute;
+        top: 0;
+        bottom: 0;
         right: 12px;
-        top: 10px;
         color: $ui-color;
         border: 0;
         background: transparent;
         font-size: 1rem;
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
     }
 }
 

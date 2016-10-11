@@ -1,7 +1,7 @@
 $(function () {
 
     // 搜索展开
-    $('.icon-search').click(function () {
+    $('.search-open').click(function () {
         $('.search').toggleClass('search-show');
     })
 
@@ -46,8 +46,6 @@ $(function () {
     // 影视详情页
     let $detailsMov = $('.details-mov')
 
-    // $detailsMov.find('.tab:first').addClass('active');
-
     // 简介
     $detailsMov.on('click', '.button-group .btn', function () {
         let $this = $(this)
@@ -65,28 +63,27 @@ $(function () {
 
     // 选集
     $detailsMov.on('click', '.num', function () {
-        var buttons1 = [{
-            text: '请选择',
-            label: true
-        }, {
-            text: '卖出',
-            bold: true,
-            color: 'danger',
+        var buttons = [{
+            text: '主线资源',
+            // bold: true,
+            // color: 'danger',
             onClick: function () {
-                $.alert("你选择了“卖出“");
+                $.alert("你选择了“主线资源“");
             }
         }, {
-            text: '买入',
+            text: '备用地址1',
             onClick: function () {
-                $.alert("你选择了“买入“");
+                $.alert("你选择了“备用地址1“");
             }
+        }, {
+            text: '备用地址2',
+            onClick: function () {
+                $.alert("你选择了“备用地址2“");
+            }
+        }, {
+            text: '取消'
         }];
-        var buttons2 = [{
-            text: '取消',
-            bg: 'danger'
-        }];
-        var groups = [buttons1, buttons2];
-        $.actions(groups);
+        $.actions(buttons);
     })
 
     // 我要报错

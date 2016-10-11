@@ -11,14 +11,20 @@
 	color: rgba(0, 0, 0, 0.38);
 }
 
-.center-tab .icon-search {
+.center-tab .search-open {
 	position: absolute;
+	top: 0;
+	bottom: 0;
 	right: 12px;
-	top: 10px;
 	color: #FF9800;
 	border: 0;
 	background: transparent;
 	font-size: 1rem;
+	padding: 0 8px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .swiper-container .swiper-slide img {
