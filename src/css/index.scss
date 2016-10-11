@@ -101,7 +101,7 @@
         border-bottom: 1px solid #ddd;
         width: 100%;
     }
-    .panel {
+    .board {
         padding-top: 2.5rem;
     }
 }
@@ -113,7 +113,7 @@
     padding: 15px 0;
 }
 
-.panel {
+.board {
     background: #fff;
     box-shadow: 0 1px 1px rgba($color: black, $alpha: 0.03);
     margin: 0;
@@ -387,11 +387,12 @@
     .tabs {
         overflow: auto;
         position: absolute;
-        top:360px;
+        top: 360px;
         bottom: 0;
         left: 0;
         padding-bottom: 48px !important;
-        .panel {
+        .board {
+            position: relative;
             padding: 16px;
             margin: 0;
             font-size: .6rem;
@@ -417,7 +418,7 @@
         }
         #detail-tab2 {
             padding-right: 0;
-            .nobuy{
+            .nobuy {
                 width: 100%;
                 text-align: center;
                 position: absolute;
@@ -441,7 +442,7 @@
                 font-size: .6rem;
                 width: 221px;
                 display: inline-block;
-                >p{
+                >p {
                     margin: 0;
                     margin-bottom: 8px;
                 }
@@ -456,6 +457,44 @@
                     color: $ui-color-text;
                     margin: 0;
                 }
+            }
+        }
+        #detail-tab3 {
+            >* {
+                width: 100%;
+                margin: 0;
+                margin-bottom: 16px;
+            }
+            .sub-tag {
+                span {
+                    color: $ui-color;
+                    padding: 5px 8px;
+                    background: #FFF3E0;
+                    border-radius: 100px;
+                    margin-right: 8px;
+                    margin-bottom: 8px;
+                    float: left;
+                    &:after {
+                        content: '#';
+                    }
+                    &:before {
+                        content: '#';
+                    }
+                }
+            }
+            .sub-text {
+                height: 80px;
+                background: rgba($color: black, $alpha: .04);
+                border: 0;
+            }
+            .sub-btn {
+                color: white;
+                background: $ui-color;
+                height: 48px;
+                line-height: 48px;
+                font-size: .7rem;
+                border: 0;
+                margin-bottom: 0;
             }
         }
     }

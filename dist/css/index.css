@@ -86,7 +86,7 @@
 	width: 100%;
 }
 
-#index-search .panel {
+#index-search .board {
 	padding-top: 2.5rem;
 }
 
@@ -97,7 +97,7 @@
 	padding: 15px 0;
 }
 
-.panel {
+.board {
 	background: #fff;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
 	margin: 0;
@@ -446,13 +446,14 @@
 	padding-bottom: 48px !important;
 }
 
-.details-mov .tabs .panel {
+.details-mov .tabs .board {
+	position: relative;
 	padding: 16px;
 	margin: 0;
 	font-size: .6rem;
 }
 
-.details-mov .tabs .panel .text {
+.details-mov .tabs .board .text {
 	text-indent: 1.2rem;
 	margin-bottom: .8rem;
 }
@@ -523,6 +524,46 @@
 .details-mov .tabs .other .infobox .p3 {
 	color: rgba(0, 0, 0, 0.54);
 	margin: 0;
+}
+
+.details-mov .tabs #detail-tab3 > * {
+	width: 100%;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.details-mov .tabs #detail-tab3 .sub-tag span {
+	color: #FF9800;
+	padding: 5px 8px;
+	background: #FFF3E0;
+	border-radius: 100px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	float: left;
+}
+
+.details-mov .tabs #detail-tab3 .sub-tag span:after {
+	content: '#';
+}
+
+.details-mov .tabs #detail-tab3 .sub-tag span:before {
+	content: '#';
+}
+
+.details-mov .tabs #detail-tab3 .sub-text {
+	height: 80px;
+	background: rgba(0, 0, 0, 0.04);
+	border: 0;
+}
+
+.details-mov .tabs #detail-tab3 .sub-btn {
+	color: white;
+	background: #FF9800;
+	height: 48px;
+	line-height: 48px;
+	font-size: .7rem;
+	border: 0;
+	margin-bottom: 0;
 }
 
 .details-mov .button-group {

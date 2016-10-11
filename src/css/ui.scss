@@ -8,7 +8,37 @@
 
 // reset sui
 body{
-    overflow: auto;
+    // overflow: auto;
+    .mask{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($color: black, $alpha: .5);
+        z-index: 99999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .msg{
+            color:white;
+            padding: .8rem;
+            background: rgba($color: black, $alpha: .8);
+            width: 60%;
+            border-radius: 4px;
+            line-height: .8rem;
+            .msg-title{
+                font-size: .7rem;
+                text-align: center;
+                margin: 0;
+                margin-bottom: .4rem;
+            }
+            .msg-text{
+                font-size: .6rem;
+                margin: 0;
+            }
+        }
+    }
 }
 
 ul,li{
@@ -38,7 +68,7 @@ a{
 
 // ------ ui ------
 .content-main{
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 

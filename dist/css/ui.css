@@ -1,5 +1,38 @@
-body {
-	overflow: auto;
+body .mask {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 99999;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+body .mask .msg {
+	color: white;
+	padding: .8rem;
+	background: rgba(0, 0, 0, 0.8);
+	width: 60%;
+	border-radius: 4px;
+	line-height: .8rem;
+}
+
+body .mask .msg .msg-title {
+	font-size: .7rem;
+	text-align: center;
+	margin: 0;
+	margin-bottom: .4rem;
+}
+
+body .mask .msg .msg-text {
+	font-size: .6rem;
+	margin: 0;
 }
 
 ul,
@@ -30,10 +63,6 @@ a {
 
 a:active {
 	color: #ffad33;
-}
-
-.content-main {
-	overflow: hidden;
 }
 
 .hide {
