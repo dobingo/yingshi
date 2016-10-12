@@ -1,0 +1,32 @@
+@import './layout/public.scss';
+.select-tools {
+    height: 44px;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    .select-switch {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .7rem;
+        color: $ui-color-dark1;
+        i {
+            margin-top: -.4rem;
+            margin-left: .4rem;
+        }
+        span {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px #ddd solid;
+        }
+        .isopen {
+            transform: rotateX(180deg);
+            margin-top: 0;
+        }
+    }
+}
