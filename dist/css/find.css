@@ -1,6 +1,7 @@
 .select-tools {
 	height: 2.2rem;
 	background: white;
+	border-bottom: 1px solid #ddd;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: justify;
@@ -102,7 +103,14 @@
 	top: 2.2rem;
 	transform: translate3d(0, -100%, 0) !important;
 	background: white;
-	border-top: #ddd 1px solid;
+}
+
+.picker-modal.modal-in {
+	transform: translate3d(0, 0, 0) !important;
+}
+
+.picker-modal.modal-out {
+	transform: translate3d(0, -100%, 0) !important;
 }
 
 .picker-items-col {
@@ -111,14 +119,6 @@
 
 .picker-item {
 	font-size: .7rem;
-}
-
-.modal-in {
-	transform: translate3d(0, 0, 0) !important;
-}
-
-.modal-out {
-	transform: translate3d(0, -100%, 0) !important;
 }
 
 .picker-columns {

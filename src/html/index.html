@@ -3,6 +3,7 @@
 {% block title%}商城首页{% endblock %}
 {% block style%}
 <link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/details.css">
 {% endblock %}
 
 
@@ -20,7 +21,7 @@
                     <div class="search">
                         <a href="javascript:" class="btn back"></a>
                         <input type="text" placeholder="请输入影片关键字">
-                        <a href="#index-search" class="btn search-btn">搜索</a>
+                        <a href="#page-search" class="btn search-btn">搜索</a>
                     </div>
                 </div>
 
@@ -41,21 +42,22 @@
                 </div>
             
             </div>
+            {{home}}{%set home = "active"%}{{home}}
             {% include "./layout/navbar.html"%}
         </div>
 
         <!--搜索页面-->
-        <div class="page" id='index-search'>
+        <div class="page" id='page-search'>
             {% include "./index/search.html"%}
         </div>
 
         <!--影视剧详情-->
-        <div class="page" id='index-details-mov'>
+        <div class="page" id='page-details-mov'>
             {% include "./details/mov.html"%}
         </div>
 
         <!--文章详情-->
-        <div class="page" id='index-details-article'>
+        <div class="page" id='page-details-article'>
             {% include "./details/article.html"%}
         </div>
    
@@ -67,4 +69,6 @@
 
 {% block script %}
 <script src="../js/index.js"></script>
+<script src="../js/details.js"></script>
+
 {% endblock %}

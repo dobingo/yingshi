@@ -2,6 +2,7 @@
 .select-tools {
     height: 2.2rem;
     background: white;
+    border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -35,26 +36,24 @@
     }
 }
 
-.find-content{
+.find-content {
     display: flex;
     flex-wrap: wrap;
     padding-top: 2.2rem;
     margin-bottom: 2.2rem;
     background: white;
-
-    .find-list{
+    .find-list {
         width: 33.3%;
         height: 11.5rem;
         font-size: .6rem;
         border-right: 1px white solid;
-
-        .imgbox{
+        .imgbox {
             overflow: hidden;
             position: relative;
-            img{
+            img {
                 height: 172px;
             }
-            .status{
+            .status {
                 @include name-background;
                 position: absolute;
                 bottom: 0;
@@ -64,7 +63,7 @@
                 padding: .2rem .4rem;
             }
         }
-        .name{
+        .name {
             color: $ui-color-dark1;
             padding: 8px;
             margin: 0;
@@ -74,31 +73,33 @@
     }
 }
 
-
 // reset picker
 .picker-modal {
     bottom: auto;
     top: 2.2rem;
     transform: translate3d(0, -100%, 0) !important;
     background: white;
-    border-top: #ddd 1px solid;
+    &.modal-in {
+        transform: translate3d(0, 0, 0) !important;
+    }
+    &.modal-out {
+        transform: translate3d(0, -100%, 0) !important;
+    }
 }
-.picker-items-col{
+
+.picker-items-col {
     width: 100%;
 }
-.picker-item{
+
+.picker-item {
     font-size: .7rem;
 }
-.modal-in {
-    transform: translate3d(0, 0, 0) !important;
-}
-.modal-out {
-    transform: translate3d(0, -100%, 0) !important;
-}
-.picker-columns{
+
+.picker-columns {
     height: 8rem;
 }
-.picker-selected{
+
+.picker-selected {
     color: $ui-color !important;
 }
 

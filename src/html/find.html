@@ -3,90 +3,109 @@
 {% block title%}发现{% endblock %}
 {% block style%}
 <link rel="stylesheet" href="../css/find.css">
+<link rel="stylesheet" href="../css/details.css">
 {% endblock %}
 
 
 
 {% block main %}
-<div class="content">
-    <div class="select-tools">
-        <div class="select-switch"><span>默认排序<i class="fa fa-sort-desc"></i></span></div>
-        <div class="select-switch"><span>地区<i class="fa fa-sort-desc"></i></span></div>
-        <div class="select-switch"><span>类型<i class="fa fa-sort-desc"></i></span></div>
-    </div>
-    <div class="find-content">
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
+<div class="page-group">
+
+    <div class="page page-current" id='index-default'>
+        <div class="content">
+            <div class="select-tools">
+                <div class="select-switch"><span>默认排序<i class="fa fa-sort-desc"></i></span></div>
+                <div class="select-switch"><span>地区<i class="fa fa-sort-desc"></i></span></div>
+                <div class="select-switch"><span>类型<i class="fa fa-sort-desc"></i></span></div>
             </div>
-            <p class="name">夏日大作战</p>
-        </div>
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
+            <div class="find-content">
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
+                <a href="#page-details-mov" class="find-list">
+                    <div class="imgbox">
+                        <img src="../images/index-banner.jpg" alt="">
+                        <div class="status">已完结</div>
+                    </div>
+                    <p class="name">夏日大作战</p>
+                </a>
             </div>
-            <p class="name">夏日大作战夏日大作战夏日大作战夏日大作战夏日大作战</p>
-        </div>
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
-            </div>
-            <p class="name">夏日大作战</p>
-        </div>
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
-            </div>
-            <p class="name">夏日大作战</p>
-        </div>
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
-            </div>
-            <p class="name">夏日大作战</p>
-        </div>
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
-            </div>
-            <p class="name">夏日大作战</p>
-        </div>
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
-            </div>
-            <p class="name">夏日大作战</p>
-        </div>
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
-            </div>
-            <p class="name">夏日大作战</p>
-        </div>
-        <div class="find-list">
-            <div class="imgbox">
-               <img src="../images/index-banner.jpg" alt="">
-               <div class="status">已完结</div>
-            </div>
-            <p class="name">夏日大作战</p>
+
+            {{ find }} {% set find = "active" %} {{ find }}
+            {% include "./layout/navbar.html"%}
         </div>
     </div>
 
+    <!--搜索页面-->
+    <div class="page" id='page-search'>
+        {% include "./index/search.html"%}
+    </div>
+
+    <!--影视剧详情-->
+    <div class="page" id='page-details-mov'>
+        {% include "./details/mov.html"%}
+    </div>
+
 </div>
-{{ find }} {% set find = "active" %} {{ find }}
-{% include "./layout/navbar.html"%}
+
 
 
 {% endblock %}
 
 {% block script %}
 <script src="../js/find.js"></script>
+<script src="../js/details.js"></script>
 {% endblock %}

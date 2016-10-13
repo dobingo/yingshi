@@ -14,3 +14,8 @@ $ui-color-dark3: rgba(0, 0, 0, 0.38);
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+// 图片盒名称渐变背景
+@mixin name-background() {
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.87) 100%);
+}
