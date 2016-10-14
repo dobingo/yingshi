@@ -1,3 +1,7 @@
+.content {
+	bottom: 2.5rem;
+}
+
 .select-tools {
 	height: 2.2rem;
 	background: white;
@@ -54,7 +58,6 @@
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	padding-top: 2.2rem;
-	margin-bottom: 2.2rem;
 	background: white;
 }
 

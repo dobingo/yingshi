@@ -5,10 +5,9 @@
 // 16px = .8rem
 // 18px = .9rem
 // 20px = 1rem
-
 // reset sui
-body{
-    .mask{
+body {
+    .mask {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -19,20 +18,20 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        .msg{
-            color:white;
+        .msg {
+            color: white;
             padding: .8rem;
             background: rgba($color: black, $alpha: .8);
             width: 60%;
             border-radius: 4px;
             line-height: .8rem;
-            .msg-title{
+            .msg-title {
                 font-size: .7rem;
                 text-align: center;
                 margin: 0;
                 margin-bottom: .4rem;
             }
-            .msg-text{
+            .msg-text {
                 font-size: .6rem;
                 margin: 0;
             }
@@ -40,113 +39,79 @@ body{
     }
 }
 
-ul,li{
+ul,
+li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+
+.infinite-scroll-preloader{
+    font-size: .6rem;
+    color: $ui-color-dark3;
+}
+
+.bar-tab .tab-item.active,
+.bar-tab .tab-item:active {
     color: $ui-color;
 }
+
 .buttons-tab {
     .button.active {
         color: $ui-color-dark1;
         border-color: $ui-color;
     }
 }
-.button{
-    color:$ui-color;
-    border-color:$ui-color;
+
+.button {
+    color: $ui-color;
+    border-color: $ui-color;
 }
-a{
-    color:$ui-color;
-    &:active{
-        color: lighten($ui-color,10%);
+
+a {
+    color: $ui-color;
+    &:active {
+        color: lighten($ui-color, 10%);
     }
 }
 
 // 操作表
-.actions-modal-group{
+.actions-modal-group {
     margin: 0;
-    .actions-modal-button{
+    .actions-modal-button {
         line-height: 2.4rem;
         font-size: .7rem;
-        color:$ui-color;
+        color: $ui-color;
     }
 }
 
 // banner
-.swiper-container{
+.swiper-container {
     padding-bottom: 0;
 }
 
 // modal
-.modal-button{
-    color:$ui-color;
+.modal-button {
+    color: $ui-color;
 }
 
 // ------ ui ------
-
-.hide{
+.hide {
     display: none !important;
 }
 
-.empty{
-    >*{
-        display: none !important;
-    }
-    background: #eee url('../images/empty_mov.png') no-repeat center 40% !important;
-    width: 100% !important;
-    height: 100% !important;
-    background-size: 205px 168px !important;
-}
-
-
-
-// icon
-// .icon {
-//     border: 0;
-//     padding: 0;
-//     margin: 0;
-//     // background-size: 2rem !important;
-//     background-size: cover;
-//     width: 24px;
-//     height: 24px;
-//     display: block;
-// }
-// .search-open {
-//     background: url('../images/icon/search.png') no-repeat;
-    
-// }
-// .icon-home{
-//     background: url('../images/icon/home.png') no-repeat;
-// }
-// .icon-camera{
-//     background: url('../images/icon/camera.png') no-repeat;
-// }
-// .icon-buy{
-//     background: url('../images/icon/buy.png') no-repeat;
-// }
-// .icon-user{
-//     background: url('../images/icon/user.png') no-repeat;
-// }
-
 // 底部navbar
-.navbar{
+.navbar {
     position: fixed;
     bottom: 0;
     left: 0;
     background: rgba($color: white, $alpha: .8);
     z-index: 1000;
-    .tab-label{
+    .tab-label {
         font-size: .5rem;
         display: block;
     }
 }
-
-
-
-
 
 // 浮动
 .pull-right {
@@ -175,5 +140,3 @@ a{
         opacity: 1;
     }
 }
-
-

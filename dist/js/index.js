@@ -4,7 +4,7 @@ $(function () {
 
     // 搜索展开
     $('.search-open').click(function () {
-        $('.search').toggleClass('search-show');
+        $('.search-tools').toggleClass('search-show');
     });
 
     // ajax

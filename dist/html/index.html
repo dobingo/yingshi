@@ -24,7 +24,7 @@
                     <a href="#tab1" class="tab-link active button">热门</a>
                     <a href="#tab2" class="tab-link button">排行</a>
                     <a href="javascript:" class="search-open"><i class="fa fa-search"></i></a>
-                    <div class="search">
+                    <div class="search-tools">
                         <a href="javascript:" class="btn back"></a>
                         <input type="text" placeholder="请输入影片关键字">
                         <a href="#page-search" class="btn search-btn">搜索</a>
@@ -337,7 +337,6 @@
     <a class="tab-item external " href="find.html">
         <span class="fa fa-camera"></span>
         <span class="tab-label">发现</span>
-        <!--<span class="badge">2</span>-->
     </a>
     <a class="tab-item external " href="#">
         <span class="fa fa-shopping-cart"></span>
@@ -352,17 +351,17 @@
 
         <!--搜索页面-->
         <div class="page" id='page-search'>
-            <div class="content">
-    <div class="search">
+            <div class="content search-page">
+    <div class="search-tools search-fixed">
         <a class="btn back" href="#"><i class="fa fa-long-arrow-left"></i></a>
         <input type="text" placeholder="请输入影片关键字">
         <a href="javascript:" class="btn search-btn">搜索</a>
     </div>
-    <div class="board movlist">
-        <!--搜索电影列表，填充位置-->
+    <div class="board movlist search-list">
+        <!--ul隐藏后，影片为空的背景图会显示-->
         <ul>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -374,7 +373,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -386,7 +385,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -398,7 +397,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -410,7 +409,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -422,7 +421,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -434,7 +433,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -546,9 +545,9 @@
         <div class="page" id='page-details-article'>
             <div class="content details details-article">
 
-    <!--<div class="tools">
+    <div class="tools">
         <a class="btn back" href="#"><i class="fa fa-long-arrow-left"></i></a>
-    </div>-->
+    </div>
 
 
     <div class="board">
@@ -584,18 +583,25 @@
 
 
 
-    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <!-- <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script> -->
+    <!-- <script src="../lib/jquery/jquery-3.0.0.min.js"></script>
     <script>
         var Zepto = jQuery;
-    </script>
-    <script src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+    </script> -->
+    <!-- <script src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script> -->
+    <script src="../lib/sui/sm.js"></script>
+    <script src="../lib/sui/sm-extend.js"></script>
     <script src="../js/public.js"></script>
-    
-    
+
+
     
 <script src="../js/index.js"></script>
 <script src="../js/details.js"></script>
 
 
+    <script>
+        $.init();
+    </script>
 </body>
 </html>

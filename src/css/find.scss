@@ -1,4 +1,8 @@
 @import './layout/public.scss';
+.content{
+    bottom: 2.5rem;
+}
+
 .select-tools {
     height: 2.2rem;
     background: white;
@@ -40,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 2.2rem;
-    margin-bottom: 2.2rem;
+    // margin-bottom: 2.2rem;
     background: white;
     .find-list {
         width: 33.3%;

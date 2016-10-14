@@ -1,3 +1,18 @@
+.content-title {
+	font-size: .7rem;
+	text-align: left;
+	margin: 0;
+	padding: 15px 0;
+}
+
+.board {
+	background: #fff;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+	margin: 0;
+	margin-bottom: 16px;
+	padding: 0 16px 16px;
+}
+
 .center-tab {
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -31,7 +46,7 @@
 	width: 100%;
 }
 
-.search {
+.search-tools {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-align: center;
@@ -43,7 +58,7 @@
 	overflow: hidden;
 }
 
-.search input {
+.search-tools input {
 	-ms-flex-positive: 1;
 	flex-grow: 1;
 	border-radius: 4px;
@@ -53,22 +68,46 @@
 	padding: 8px;
 }
 
-.search .btn {
+.search-tools .btn {
 	padding: 6px 12px;
 }
 
-.search .search-btn {
+.search-tools .search-btn {
 	font-size: .7rem;
 	color: #FF9800;
 	width: auto !important;
 }
 
-.search-show {
-	opacity: 1 !important;
-	width: 100% !important;
+.search-list {
+	position: absolute;
+	top: 44px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0 !important;
+	background: url("../images/spritesheet.png") no-repeat;
+	background-position: -0px -0px;
+	background-position: center;
+	background-size: 205px 168px;
 }
 
-.buttons-tab .search {
+.search-list ul {
+	background: white;
+	min-height: 100%;
+	padding: 0 16px;
+}
+
+.search-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: white;
+	box-sizing: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-tab .search-tools {
 	position: absolute;
 	background: #eee;
 	right: 0;
@@ -76,6 +115,11 @@
 	z-index: 10;
 	opacity: 0;
 	width: 0;
+}
+
+.buttons-tab .search-tools.search-show {
+	opacity: 1 !important;
+	width: 100% !important;
 }
 
 #index-default .movlist {
@@ -94,21 +138,6 @@
 
 #page-search .board {
 	padding-top: 2.5rem;
-}
-
-.content-title {
-	font-size: .7rem;
-	text-align: left;
-	margin: 0;
-	padding: 15px 0;
-}
-
-.board {
-	background: #fff;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-	margin: 0;
-	margin-bottom: 16px;
-	padding: 0 16px 16px;
 }
 
 .imgbox {

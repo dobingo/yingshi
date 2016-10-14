@@ -18,80 +18,28 @@
 <div class="page-group">
 
     <div class="page page-current" id='index-default'>
-        <div class="content">
+        <div class="content infinite-scroll infinite-scroll-bottom">
             <div class="select-tools">
                 <div class="select-switch"><span>默认排序<i class="fa fa-sort-desc"></i></span></div>
                 <div class="select-switch"><span>地区<i class="fa fa-sort-desc"></i></span></div>
                 <div class="select-switch"><span>类型<i class="fa fa-sort-desc"></i></span></div>
             </div>
             <div class="find-content">
-                <a href="#page-details-mov" class="find-list">
+                <!-- <a href="#page-details-mov" class="find-list">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                         <div class="status">已完结</div>
                     </div>
                     <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
+                </a> -->
             </div>
-
-              active
-            <nav class="navbar bar bar-tab">
+            <!-- 加载提示符 -->
+            <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div>
+        </div>
+        active
+        <nav class="navbar bar bar-tab">
     <a class="tab-item external " href="index.html">
         <span class="fa fa-home"></span>
         <span class="tab-label">首页</span>
@@ -99,7 +47,6 @@
     <a class="tab-item external active" href="find.html">
         <span class="fa fa-camera"></span>
         <span class="tab-label">发现</span>
-        <!--<span class="badge">2</span>-->
     </a>
     <a class="tab-item external " href="#">
         <span class="fa fa-shopping-cart"></span>
@@ -110,22 +57,21 @@
         <span class="tab-label">我的</span>
     </a>
 </nav>
-        </div>
     </div>
 
     <!--搜索页面-->
     <div class="page" id='page-search'>
-        <div class="content">
-    <div class="search">
+        <div class="content search-page">
+    <div class="search-tools search-fixed">
         <a class="btn back" href="#"><i class="fa fa-long-arrow-left"></i></a>
         <input type="text" placeholder="请输入影片关键字">
         <a href="javascript:" class="btn search-btn">搜索</a>
     </div>
-    <div class="board movlist">
-        <!--搜索电影列表，填充位置-->
+    <div class="board movlist search-list">
+        <!--ul隐藏后，影片为空的背景图会显示-->
         <ul>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -137,7 +83,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -149,7 +95,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -161,7 +107,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -173,7 +119,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -185,7 +131,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -197,7 +143,7 @@
                 </a>
             </li>
             <li>
-                <a class="flexlist" href="">
+                <a class="flexlist" href="#">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                     </div>
@@ -311,17 +257,24 @@
 
 
 
-    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <!-- <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script> -->
+    <!-- <script src="../lib/jquery/jquery-3.0.0.min.js"></script>
     <script>
         var Zepto = jQuery;
-    </script>
-    <script src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+    </script> -->
+    <!-- <script src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script> -->
+    <script src="../lib/sui/sm.js"></script>
+    <script src="../lib/sui/sm-extend.js"></script>
     <script src="../js/public.js"></script>
-    
-    
+
+
     
 <script src="../js/find.js"></script>
 <script src="../js/details.js"></script>
 
+    <script>
+        $.init();
+    </script>
 </body>
 </html>

@@ -12,81 +12,28 @@
 <div class="page-group">
 
     <div class="page page-current" id='index-default'>
-        <div class="content">
+        <div class="content infinite-scroll infinite-scroll-bottom">
             <div class="select-tools">
                 <div class="select-switch"><span>默认排序<i class="fa fa-sort-desc"></i></span></div>
                 <div class="select-switch"><span>地区<i class="fa fa-sort-desc"></i></span></div>
                 <div class="select-switch"><span>类型<i class="fa fa-sort-desc"></i></span></div>
             </div>
             <div class="find-content">
-                <a href="#page-details-mov" class="find-list">
+                <!-- <a href="#page-details-mov" class="find-list">
                     <div class="imgbox">
                         <img src="../images/index-banner.jpg" alt="">
                         <div class="status">已完结</div>
                     </div>
                     <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
-                <a href="#page-details-mov" class="find-list">
-                    <div class="imgbox">
-                        <img src="../images/index-banner.jpg" alt="">
-                        <div class="status">已完结</div>
-                    </div>
-                    <p class="name">夏日大作战</p>
-                </a>
+                </a> -->
             </div>
-
-            {{ find }} {% set find = "active" %} {{ find }}
-            {% include "./layout/navbar.html"%}
+            <!-- 加载提示符 -->
+            <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div>
         </div>
+        {{find}}{%set find = "active"%}{{find}}
+        {% include "./layout/navbar.html"%}
     </div>
 
     <!--搜索页面-->

@@ -42,6 +42,11 @@ li {
 	list-style: none;
 }
 
+.infinite-scroll-preloader {
+	font-size: .6rem;
+	color: rgba(0, 0, 0, 0.38);
+}
+
 .bar-tab .tab-item.active,
 .bar-tab .tab-item:active {
 	color: #FF9800;
@@ -84,18 +89,6 @@ a:active {
 }
 
 .hide {
-	display: none !important;
-}
-
-.empty {
-	background: #eee url("../images/spritesheet.png") no-repeat center 40% !important;
-	background-position: -0px -0px;
-	width: 100% !important;
-	height: 100% !important;
-	background-size: 205px 168px !important;
-}
-
-.empty > * {
 	display: none !important;
 }
 

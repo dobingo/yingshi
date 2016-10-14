@@ -4,11 +4,6 @@
  *
  * =====================================================
  */
-
-// 兼容jquery
-var Zepto = jQuery;
-
-
 ;$.smVersion = "0.6.2";+function ($) {
     "use strict";
 
@@ -6566,7 +6561,8 @@ Device/OS Detection
         if (infiniteContent.length === 0) return;
         $.attachInfiniteScroll(infiniteContent);
         //如果是顶部无限刷新，要将滚动条初始化于最下端
-        pageContainer.forEach(function(v){
+        // pageContainer.forEach(function(v){
+        pageContainer.each(function(i,v){
             if($(v).hasClass('infinite-scroll-top')){
                 var height = v.scrollHeight - v.clientHeight;
                 $(v).scrollTop(height);
