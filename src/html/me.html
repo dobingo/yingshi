@@ -1,0 +1,102 @@
+{% extends "./layout/default.html"%} 
+
+{% block title%}我的{% endblock %} 
+
+{% block style%}
+<link rel="stylesheet" href="../css/me.css"> 
+{% endblock %} 
+
+{% block main %}
+<div class="page-group">
+
+    <div class="page page-current" id='me-default'>
+        <div class="content">
+            <div class="userinfo alist endone">
+                <a class="headpic" href="#">
+                    <img src="../images/index-banner.jpg" alt="">
+                </a>
+                <div class="text">
+                    <span class="name">周呗</span>
+                    <span class="weixin">微信号：<span>18923525</span></span>
+                </div>
+            </div>
+            <div class="money endone">
+                <div class="circle">
+                    <div class="echart"></div>
+                    <div class="total">
+                        <div class="num">125.00</div>
+                        <span class="numinfo">账户余额</span>
+                    </div>
+                </div>
+                <div class="circle-details">
+                    <div class="numdetails">
+                        <b class="yellow"></b>
+                        <span class="numinfo">充值余额</span>
+                        <span class="num">78.13</span>
+                    </div>
+                    <div class="numdetails">
+                        <b class="red"></b>
+                        <span class="numinfo">收益余额</span>
+                        <span class="num">46.87</span>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="alist">
+                    <i class="fa fa-bar-chart ico"></i>
+                    <span class="name">收益明细</span>
+                    <span class="name2">查看各级推客贡献</span>
+                </div>
+                <div class="line"></div>
+                <div class="alist noarrow">
+                    <a href="#" class="btn border-right">
+                        <i class="fa fa-download ico"></i>
+                        <span class="name">充值</span>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fa fa-upload ico"></i>
+                        <span class="name">提现</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="other">
+                <a class="alist">
+                    <i class="fa fa-shopping-cart ico"></i>
+                    <span class="name">购物车</span>
+                </a>
+                <div class="line"></div>
+                <a class="alist">
+                    <i class="fa fa-film ico"></i>
+                    <span class="name">我的影片</span>
+                </a>
+                <div class="line"></div>
+                <a class="alist">
+                    <i class="fa fa-commenting-o ico"></i>
+                    <span class="name">系统消息</span>
+                </a>
+                <div class="line"></div>
+                <a class="alist endone">
+                    <i class="fa fa-qrcode ico"></i>
+                    <span class="name">我的推客二维码</span>
+                </a>
+
+                <a class="alist endone">
+                    <i class="fa fa-meh-o ico"></i>
+                    <span class="name">用户反馈与报错</span>
+                </a>
+            </div>
+            
+
+        </div>
+        <!--{{me}}{%set me = "active"%}{{me}}-->
+        {% include "./layout/navbar.html"%}
+    </div>
+
+
+</div>
+{% endblock %} 
+
+{% block script %}
+<script src="../lib/echart/echarts.simple.min.js"></script>
+<script src="../js/me.js"></script> 
+{% endblock %}

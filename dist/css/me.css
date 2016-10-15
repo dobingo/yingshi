@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+.content {
+	bottom: 2.5rem;
+}
+
+.endone {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	margin-bottom: 0.8rem;
+}
+
+.alist {
+	height: 2.8rem;
+	background: white;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+}
+
+.alist:after {
+	content: '>';
+	font-size: 0.7rem;
+	color: #AAAAAA;
+	position: absolute;
+	right: 0.7rem;
+	top: 50%;
+	transform: scale3d(1, 1.7, 1) translateY(-40%);
+}
+
+.alist .ico {
+	color: #FF9800;
+	font-size: 0.9rem;
+	margin-left: 0.8rem;
+	margin-right: 0.4rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	overflow: hidden;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.alist .name {
+	font-size: 0.7rem;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.alist .name2 {
+	font-size: 0.6rem;
+	color: rgba(0, 0, 0, 0.38);
+	position: absolute;
+	right: 2rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.alist.noarrow:after {
+	display: none;
+}
+
+.alist .btn {
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	display: -ms-flexbox;
+	display: flex;
+	height: 100%;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.alist .btn.border-right {
+	position: relative;
+}
+
+.alist .btn.border-right:after {
+	content: '|';
+	position: absolute;
+	right: 0;
+	color: #ddd;
+	font-weight: 100;
+}
+
+.userinfo .headpic {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	margin-left: 0.8rem;
+	margin-right: 0.8rem;
+	overflow: hidden;
+}
+
+.userinfo .headpic img {
+	width: 100%;
+	height: 100%;
+}
+
+.userinfo .text {
+	line-height: 1;
+}
+
+.userinfo .text .name {
+	display: block;
+	font-size: 0.7rem;
+	color: rgba(0, 0, 0, 0.87);
+	margin: 0;
+}
+
+.userinfo .text .weixin {
+	font-size: 0.6rem;
+	color: rgba(0, 0, 0, 0.54);
+	margin: 0;
+}
+
+.money {
+	background: white;
+	width: 100%;
+	overflow: hidden;
+}
+
+.money .num {
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.money .num:before {
+	content: '¥';
+}
+
+.money .numinfo {
+	color: rgba(0, 0, 0, 0.54);
+	font-size: 0.7rem;
+}
+
+.money .circle {
+	margin: 0 auto;
+	position: relative;
+	width: 9.3rem;
+	height: 9.3rem;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.money .circle .echart {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.money .circle .total {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 2;
+}
+
+.money .circle .total .num {
+	width: 100%;
+	font-size: 0.8rem;
+}
+
+.money .circle .total .numinfo {
+	width: 100%;
+}
+
+.money .circle-details {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 0 1.45rem;
+}
+
+.money .circle-details b {
+	width: 0.7rem;
+	height: 0.7rem;
+	display: inline-block;
+	border-radius: 4px;
+}
+
+.money .circle-details .yellow {
+	background: #FFC107;
+}
+
+.money .circle-details .red {
+	background: #F36C60;
+}
+
+.money .circle-details .numdetails {
+	font-size: 0.7rem;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-bottom: 1.05rem;
+}
+
+.money .circle-details .numdetails > * {
+	margin-right: 0.4rem;
+}
+
+.other {
+	width: 100%;
+	overflow: hidden;
+}
+
+/*# sourceMappingURL=me.css.map */

@@ -113,6 +113,13 @@ a {
     }
 }
 
+.line{
+    margin-left: rem(16px);
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+}
+
 // 浮动
 .pull-right {
     float: right;

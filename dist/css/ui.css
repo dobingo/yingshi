@@ -105,6 +105,13 @@ a:active {
 	display: block;
 }
 
+.line {
+	margin-left: 0.8rem;
+	width: 100%;
+	height: 1px;
+	background: #ddd;
+}
+
 .pull-right {
 	float: right;
 }
