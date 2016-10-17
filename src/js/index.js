@@ -5,7 +5,8 @@ $(function () {
     // 开启loading效果
     $.showPreloader();
 
-    // 首页
+
+    // 首页 - 首次进入首页会请求
     $.ajax({
         type: "get",
         dataType: "json",
@@ -20,7 +21,8 @@ $(function () {
 
         },
         error: (e) => {
-            console.log('banner加载出错', e);
+            console.log('首页加载出错', e);
+            $.alert('首页加载出错，请稍后再试');
         },
         complete: () => {
             // 加载完毕，关闭loading效果
@@ -30,6 +32,7 @@ $(function () {
 
     // 加载banner数据
     function initBanner(bannerData) {
+
         $('#banner img').each((i, img) => {
             img.src = bannerData[i].pUrl
         })
@@ -138,8 +141,6 @@ $(function () {
                     // 没有数据
                 }
 
-                initRanking(res.headerRes)
-
             },
             error: (e) => {
                 console.log('排行加载出错', e);
@@ -151,7 +152,7 @@ $(function () {
     }
     let rankTab = $('.ranking .tab-link')
     let rankContainer = $('.ranking .hotlist')
-    rankTab.one('click',function () {
+    rankTab.one('click', function () {
         initRanking(rankContainer[$(this).index()])
     })
     $('#rank-indexbtn').one('click', function () {
@@ -189,7 +190,7 @@ $(function () {
                 data: {
                     searchName: searchName
                 },
-                dataType:'json',
+                dataType: 'json',
                 success: function (res) {
                     // console.log(res);
                     let listTpl = ``;

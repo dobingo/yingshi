@@ -9,7 +9,7 @@ $(function () {
     // 开启loading效果
     $.showPreloader();
 
-    // 首页
+    // 首页 - 首次进入首页会请求
     $.ajax({
         type: "get",
         dataType: "json",
@@ -23,7 +23,8 @@ $(function () {
             initRankTop(res.rankTop);
         },
         error: function error(e) {
-            console.log('banner加载出错', e);
+            console.log('首页加载出错', e);
+            $.alert('首页加载出错，请稍后再试');
         },
         complete: function complete() {
             // 加载完毕，关闭loading效果
@@ -33,6 +34,7 @@ $(function () {
 
     // 加载banner数据
     function initBanner(bannerData) {
+
         $('#banner img').each(function (i, img) {
             img.src = bannerData[i].pUrl;
         });
@@ -104,8 +106,6 @@ $(function () {
                 } else {
                     // 没有数据
                 }
-
-                initRanking(res.headerRes);
             },
             error: function error(e) {
                 console.log('排行加载出错', e);
