@@ -48,7 +48,9 @@
     }
 }
 
+
 .swiper-container {
+    min-height: rem(250px);
     .swiper-slide {
         img {
             width: 100%;
@@ -63,6 +65,9 @@
     height: 44px;
     transition: .3s;
     overflow: hidden;
+    &.search-outside{//首页上的search
+        padding-left: 12px;
+    }
     input {
         flex-grow: 1;
         border-radius: 4px;
@@ -132,16 +137,6 @@
 }
 
 #page-search {
-    // 单独的搜索页
-    .search {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        background: white;
-        border-bottom: 1px solid #ddd;
-        width: 100%;
-    }
     .board {
         padding-top: 2.5rem;
     }

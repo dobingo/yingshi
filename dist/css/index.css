@@ -42,6 +42,10 @@
 	align-items: center;
 }
 
+.swiper-container {
+	min-height: 12.5rem;
+}
+
 .swiper-container .swiper-slide img {
 	width: 100%;
 }
@@ -56,6 +60,10 @@
 	height: 44px;
 	transition: .3s;
 	overflow: hidden;
+}
+
+.search-tools.search-outside {
+	padding-left: 12px;
 }
 
 .search-tools input {
@@ -124,16 +132,6 @@
 
 #index-default .movlist {
 	margin-bottom: 2.5rem;
-}
-
-#page-search .search {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	background: white;
-	border-bottom: 1px solid #ddd;
-	width: 100%;
 }
 
 #page-search .board {
