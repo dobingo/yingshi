@@ -1,4 +1,4 @@
-$.msg = function(opts, timeout) {
+$.msg = function (opts, timeout) {
     let text = opts.text || opts
     let title = opts.title || '温馨提示'
     timeout = opts.timeout || 2000
@@ -15,8 +15,35 @@ $.msg = function(opts, timeout) {
     $('body').append($tpl)
 
     if (timeout) {
-        setTimeout(function() {
+        setTimeout(function () {
             $tpl.remove()
         }, timeout);
     }
 }
+
+
+
+// 影视详情绑定
+$(document).on('click','.getMovie',function(){
+    function _updateDetailsPage(res) {
+        let $page = $('.movieDetails')
+        $page.find('.pic').attr('src',res.MOVIE.poster)
+    }
+
+    let $this = $(this)
+    let movieId = $this.attr('movieId')
+    $.ajax({
+        type: "get",
+        url: "http://118.178.136.60:8001/rest/index/getMovie",
+        data: {
+            movieId: movieId
+        },
+        success: function (res) {
+            console.log(res);
+            _updateDetailsPage(res);
+        },
+        error: function (e) {
+            console.log('影视详情页获取失败。', e);
+        }
+    });
+})

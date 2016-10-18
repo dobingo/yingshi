@@ -31,10 +31,15 @@ $(function () {
     })
 
     // 加载banner数据
-    function initBanner(bannerData) {
+    function initBanner(res) {
 
         $('#banner img').each((i, img) => {
-            img.src = bannerData[i].pUrl
+            img.src = res[i].pUrl
+        })
+        $('#banner a').each((i, a) => {
+            let $a = $(a)
+            let href = $a.attr('href')
+            $a.attr('href', href + '?movieId=' + res[i].id)
         })
 
         // 初始化 swiper组件
@@ -57,7 +62,7 @@ $(function () {
             let mov = movs[i]
             tpl += `
             <li>
-                <a href="#page-details-mov">
+                <a href="./movieDetails.html?movieId=${mov.id}" class="external">
                     <img src="${mov.poster}" />
                     <p class="name">${mov.updateStatus == 0 ? '更新中' : '已完结'}</p>
                     <p class="text">${mov.introduction}</p>
@@ -82,17 +87,17 @@ $(function () {
     function initRankTop(res) {
         let tpl = ``
         for (let i = 0; i < res.length; i++) {
-            let r = res[i]
+            let mov = res[i]
             tpl += `
             <li>
-                <a class="flexlist" href="#page-details-mov">
+                <a class="external flexlist" href="./movieDetails.html?movieId=${mov.id}">
                     <div class="imgbox">
-                        <img src="${r.poster}" alt="">
+                        <img src="${mov.poster}" alt="">
                     </div>
                     <div class="info">
-                        <span class="t"><span class="index">01</span>${r.title}</span>
-                        <p class="text">${r.introduction}</p>
-                        <span class="text2">更新到第${r.updateSite}集</span>
+                        <span class="t"><span class="index">01</span>${mov.title}</span>
+                        <p class="text">${mov.introduction}</p>
+                        <span class="text2">更新到第${mov.updateSite}集</span>
                     </div>
                 </a>
             </li>
@@ -111,7 +116,7 @@ $(function () {
                 let d = data[0]
                 tpl += `
                 <li>
-                    <a class="flexlist" href="#page-details-mov">
+                    <a class="external flexlist" href="./movieDetails.html?movieId=${d.id}">
                         <div class="imgbox">
                             <img src="${d.poster}" alt="">
                         </div>
@@ -202,7 +207,7 @@ $(function () {
                             let index = mov.id < 10 ? '0' + mov.id : mov.id
                             listTpl += `
                             <li>
-                                <a class="flexlist" href="#">
+                                <a class="external flexlist" href="./movieDetails.html?movieId=${mov.id}">
                                     <div class="imgbox">
                                         <img src="${mov.poster}" />
                                     </div>

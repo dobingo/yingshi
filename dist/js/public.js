@@ -15,4 +15,29 @@ $.msg = function (opts, timeout) {
         }, timeout);
     }
 };
+
+// 影视详情绑定
+$(document).on('click', '.getMovie', function () {
+    function _updateDetailsPage(res) {
+        var $page = $('.movieDetails');
+        $page.find('.pic').attr('src', res.MOVIE.poster);
+    }
+
+    var $this = $(this);
+    var movieId = $this.attr('movieId');
+    $.ajax({
+        type: "get",
+        url: "http://118.178.136.60:8001/rest/index/getMovie",
+        data: {
+            movieId: movieId
+        },
+        success: function success(res) {
+            console.log(res);
+            _updateDetailsPage(res);
+        },
+        error: function error(e) {
+            console.log('影视详情页获取失败。', e);
+        }
+    });
+});
 //# sourceMappingURL=public.js.map

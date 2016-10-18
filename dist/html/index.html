@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css/ui.css">
     
 <link rel="stylesheet" href="../css/index.css">
-<link rel="stylesheet" href="../css/details.css">
 
 </head>
 <body>
@@ -40,17 +39,17 @@
 <div id="banner" class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <a href="#page-details-mov">
+            <a href="./movieDetails.html" class="external">
                 <img src="#" alt="">
             </a>
         </div>
         <div class="swiper-slide">
-            <a href="#page-details-mov">
+            <a href="./movieDetails.html" class="external">
                 <img src="#" alt="">
             </a>
         </div>
         <div class="swiper-slide">
-            <a href="#page-details-mov">
+            <a href="./movieDetails.html" class="external">
                 <img src="#" alt="">
             </a>
         </div>
@@ -227,98 +226,6 @@
 </div>
         </div>
 
-        <!--影视剧详情-->
-        <div class="page" id='page-details-mov'>
-            <div class="content details">
-
-    <!--fixed-->
-    <div class="tools">
-        <a class="btn back" href="#"><i class="fa fa-long-arrow-left"></i></a>
-        <a href="#" class="btn buy"><i class="fa fa-shopping-cart"></i></a>
-    </div>
-    <!--end fixed-->
-
-
-    <div class="detail-content">
-        <img src="../images/index-banner.jpg" alt="" class="pic">
-        <div class="detail-mask"></div>
-        <div class="info">
-            <span class="index">更新到11集</span>
-            <h1>迷失东京</h1>
-            <p class="dlist"><span class="s1">主演</span><span class="s2">斯嘉丽·约翰逊</span></p>
-            <p class="dlist"><span class="s1">地区</span><span class="s2">日本</span></p>
-            <p class="dlist"><span class="s1">类型</span><span class="s2">爱情</span></p>
-            <p class="dlist"><span class="s1">价格</span><span class="s2 money">¥20.00</span></p>
-        </div>
-    </div>
-
-    <!--tab-->
-    <div class="buttons-tab">
-        <a href="#detail-tab1" class="tab-link active button">简介</a>
-        <a href="#detail-tab2" class="tab-link button">选集</a>
-        <a href="#detail-tab3" class="tab-link button">我要报错</a>
-    </div>
-
-    <!--tab内容-->
-    <div class="tabs">
-
-        <div id="detail-tab1" class="tab active">
-            <div class="board">
-                <div class="text">
-                    人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？ 看《迷失东京》前，未曾料想会收获这样一种感觉。看完之后，就想起了《红楼梦》里的话：莫失莫忘，不离不弃。原来人最终不能忘却和离弃的人只是自己。拍电影的人，演电影的人，看电影的人，不过都是为了在里头取悦自己。
-                    于是我撞见了自己，《迷失东京》里的过气明星和敏感少女，不过是换了脸谱的另一个自己，辛辛苦苦，粉墨登场，自己演来自己观赏。东京只不过是一个符号，一个场景，人到哪里都在迷失，又无所谓是在东京还是纽约。 人生在世，孤苦无比，如果得知原有些人和你一般孤苦，是否心里会好受些？
-                    看《迷失东京》前，未曾料想会收获这样一种感觉。看完之后，就想起了《红楼梦》里的话：莫失莫忘，不离不弃。原来人最终不能忘却和离弃的人只是自己。拍电影的人，演电影的人，看电影的人，不过都是为了在里头取悦自己。 于是我撞见了自己，《迷失东京》里的过气明星和敏感少女，不过是换了脸谱的另一个自己，辛辛苦苦，粉墨登场，自己演来自己观赏。东京只不过是一个符号，一个场景，人到哪里都在迷失，又无所谓是在东京还是纽约。
-                </div>
-                <div class="other">
-                    <img class="code" src="../images/code.jpg" alt="">
-                    <div class="infobox">
-                        <p class="p1">扫描二维码关注</p>
-                        <p class="p2">海量影片，高清资源</p>
-                        <p class="p3">更多精彩内容请关注后进入</p>
-                        <p class="p3">“影视分销公众号”</p>
-                    </div>
-                </div>
-                <!-- button group -->
-                <div class="button-group">
-                    <a href="#" class="btn cart">加入购物车</a>
-                    <a href="#" class="btn buy">立即购买</a>
-                </div>
-            </div>
-        </div>
-        <div id="detail-tab2" class="tab board">
-            <div class="numbox">
-                <a href="#" class="num">1</a>
-                <a href="#" class="num">2</a>
-                <a href="#" class="num">3</a>
-                <a href="#" class="num">4</a>
-                <a href="#" class="num">5</a>
-                <a href="#" class="num">6</a>
-                <a href="#" class="num">7</a>
-                <a href="#" class="num">8</a>
-                <a href="#" class="num">9</a>
-                <a href="#" class="num">10</a>
-            </div>
-            <!-- 删除numbox就会显示nobuy-->
-            <p class="nobuy">提示: 购买后可查看资源地址</p>
-        </div>
-        <div id="detail-tab3" class="tab board">
-            <div class="sub-tag">
-                <span>影片链接错了</span>
-                <span>不够高清</span>
-                <span>电影介绍错误</span>
-                <span>地址有毒</span>
-                <span>香甜小鲍鱼</span>
-            </div>
-            <textarea class="sub-text" rows="" cols=""></textarea>
-            <button class="sub-btn">提交问题</button>
-        </div>
-
-    </div>
-
-
-</div>
-        </div>
-
         <!--文章详情-->
         <div class="page" id='page-details-article'>
             <div class="content details details-article">
@@ -375,7 +282,6 @@
 
     
 <script src="../js/index.js"></script>
-<script src="../js/details.js"></script>
 
 
     <script>

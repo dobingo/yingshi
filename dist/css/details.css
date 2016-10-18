@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .details {
 	background: #fff;
 }
@@ -30,6 +32,7 @@
 .details .detail-content {
 	height: 320px;
 	position: relative;
+	overflow: hidden;
 }
 
 .details .detail-content .pic {
@@ -90,6 +93,10 @@
 	color: #FF9800;
 }
 
+.details .detail-content .info .dlist .money:before {
+	content: '¥';
+}
+
 .details .tabs {
 	overflow: auto;
 	position: absolute;
@@ -102,6 +109,7 @@
 .details .tabs .board {
 	position: relative;
 	padding: 16px;
+	padding-bottom: 0;
 	margin: 0;
 	font-size: .6rem;
 }
