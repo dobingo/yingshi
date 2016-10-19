@@ -77,7 +77,7 @@ $(function () {
     function deleteEmpty() {
         var $list = $('.list>li');
         if ($list.length == 0) {
-            $('.list,.tools').hide();
+            $('.list,.tools,.edit').hide();
         }
     }
 });
