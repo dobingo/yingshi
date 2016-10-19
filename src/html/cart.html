@@ -1,0 +1,48 @@
+{% extends "./layout/default.html"%}
+
+{% block title%}购物车{% endblock %}
+{% block style%}
+<link rel="stylesheet" href="../css/cart.css">
+{% endblock %}
+
+
+
+{% block main %}
+<div class="page-group">
+
+    <div class="page page-current" id='index-default'>
+        <div class="content infinite-scroll infinite-scroll-bottom">
+            <div class="headerTools">
+                <a class="btn back" href="#"><i class="fa fa-long-arrow-left"></i></a>
+                <span class="btn edit">编辑</span>
+            </div>
+            <ul class="list">
+
+            </ul>
+            <div class="tools">
+                <div class="selectAll">
+                    <label class="checkbox">
+                        <input id="selectAll" type="checkbox">
+                        <label for="selectAll"></label>
+                        <span class="labelName">全选</span>
+                    </label>
+                    <span class="info">合计：<span class="price">0.00</span></span>
+                </div>
+                <a href="#" class="btn pay">支付</a>
+                <a href="#" class="btn deleteAll" style="display: none">删除</a>
+            </div>
+            <div class="empty_cart"></div>
+        </div>
+        <!--{{cart}}{%set cart = "active"%}{{cart}}-->
+        {% include "./layout/navbar.html"%}
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+
+{% block script %}
+<script src="../js/cart.js"></script>
+{% endblock %}

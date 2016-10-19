@@ -17,6 +17,15 @@
     function _updateDetailsPage(data) {
         const mov = data.MOVIE //当前电影数据
         const series = data.MOVIE_SERIES //当前电影选集数据
+        let isbuy = Number(data.IS_BUY)
+
+        // 是否已购
+        // isbuy = 0
+        if (isbuy) {
+            $('#isbuy').hide();
+        }else{
+            $('.numbox').hide();
+        }
 
         for (let key in mov) {
             let $dom = $('#' + key)

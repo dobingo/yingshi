@@ -15,7 +15,7 @@
 <body>
     
 <div class="page-group">
-	<div class="page page-current" id='details-default'>
+	<div class="page page-current" id='page1'>
 		<div class="content details">
 
 			<!--fixed-->
@@ -35,7 +35,7 @@
 					<p class="dlist"><span class="s1">主演</span><span class="s2" id="star"></span></p>
 					<p class="dlist"><span class="s1">地区</span><span class="s2" id="area"></span></p>
 					<p class="dlist"><span class="s1">类型</span><span class="s2" id="type"></span></p>
-					<p class="dlist"><span class="s1">价格</span><span class="s2 money" id="price"></span></p>
+					<p class="dlist"><span class="s1">价格</span><span class="s2 price" id="price"></span></p>
 				</div>
 			</div>
 
@@ -48,6 +48,11 @@
 
 			<!--tab内容-->
 			<div class="tabs">
+				<!-- button group -->
+				<div class="button-group" id="isbuy">
+					<a href="#" class="btn cart">加入购物车</a>
+					<a href="#" class="btn buy">立即购买</a>
+				</div>
 
 				<div id="detail-tab1" class="tab active">
 					<div class="board">
@@ -60,11 +65,6 @@
 								<p class="p3">更多精彩内容请关注后进入</p>
 								<p class="p3">“影视分销公众号”</p>
 							</div>
-						</div>
-						<!-- button group -->
-						<div class="button-group">
-							<a href="#" class="btn cart">加入购物车</a>
-							<a href="#" class="btn buy">立即购买</a>
 						</div>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
 
 
     
-<script src="../js/details.js"></script>
+<script src="../js/movDetails.js"></script>
 
     <script>
         $.init();

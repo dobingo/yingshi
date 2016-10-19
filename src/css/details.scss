@@ -70,11 +70,8 @@
                     color: rgba($color: white, $alpha: .7);
                     margin-right: 8px;
                 }
-                .money {
+                .price{
                     color: $ui-color;
-                    &:before{
-                        content: '¥'
-                    }
                 }
             }
         }
@@ -89,7 +86,7 @@
         .board {
             position: relative;
             padding: 16px;
-            padding-bottom: 0;
+            // padding-bottom: 0;
             margin: 0;
             font-size: .6rem;
             .text {
@@ -113,8 +110,6 @@
             float: left;
         }
         #detail-tab2 {
-            width: 100%;
-            height: 100%;
             padding-right: 0;
             .numbox {
                 position: absolute;
@@ -130,7 +125,7 @@
                 width: 100%;
                 text-align: center;
                 position: absolute;
-                top: 100px;
+                top: 40%;
                 left: 0;
                 font-size: .6rem;
                 z-index: 0;
@@ -241,6 +236,7 @@
 
 // 文章详情
 .details-article {
+    padding: 2rem .8rem 0;
     .tools {
         background: white;
         box-shadow: 0 1px 1px rgba($color: black, $alpha: .1);
@@ -279,4 +275,14 @@
             }
         }
     }
+}
+
+#detail-tab1,
+#detail-tab2 {
+    position: absolute;
+    top: 0;
+    bottom: 2.4rem;
+    right: 0;
+    left: 0;
+    overflow: auto;
 }

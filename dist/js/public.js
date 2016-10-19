@@ -1,5 +1,10 @@
 'use strict';
 
+$.url = {
+    movDetails: './movieDetails.html?movieId=',
+    artDetails: './articleDetails.html?articleId='
+};
+
 $.msg = function (opts, timeout) {
     var text = opts.text || opts;
     var title = opts.title || '温馨提示';

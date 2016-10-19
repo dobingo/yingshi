@@ -60,9 +60,8 @@
         // 生成新条目的HTML
         let html = '';
         for (let i = lastIndex + 1; i <= lastIndex + number; i++) {
-            // html += '<li class="item-content"><div class="item-inner"><div class="item-title">Item ' + i + '</div></div></li>';
             html += `
-            <a href="#page-details-mov" class="find-list">
+            <a href="./movieDetails.html?movieId=" class="find-list">
                 <div class="imgbox">
                     <img src="../images/index-banner.jpg" alt="">
                     <div class="status">已完结</div>

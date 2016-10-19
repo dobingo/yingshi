@@ -55,8 +55,7 @@
             // 生成新条目的HTML
             var html = '';
             for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                // html += '<li class="item-content"><div class="item-inner"><div class="item-title">Item ' + i + '</div></div></li>';
-                html += '\n            <a href="#page-details-mov" class="find-list">\n                <div class="imgbox">\n                    <img src="../images/index-banner.jpg" alt="">\n                    <div class="status">已完结</div>\n                </div>\n                <p class="name">夏日大作战 ' + i + '</p>\n            </a>\n            ';
+                html += '\n            <a href="./movieDetails.html?movieId=" class="find-list">\n                <div class="imgbox">\n                    <img src="../images/index-banner.jpg" alt="">\n                    <div class="status">已完结</div>\n                </div>\n                <p class="name">夏日大作战 ' + i + '</p>\n            </a>\n            ';
             }
             // 添加新条目
             $('.infinite-scroll-bottom .find-content').append(html);

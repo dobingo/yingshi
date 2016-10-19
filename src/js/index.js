@@ -38,8 +38,7 @@ $(function () {
         })
         $('#banner a').each((i, a) => {
             let $a = $(a)
-            let href = $a.attr('href')
-            $a.attr('href', href + '?movieId=' + res[i].id)
+            $a.attr('href', $.url.movDetails + res[i].id)
         })
 
         // 初始化 swiper组件
@@ -62,7 +61,7 @@ $(function () {
             let mov = movs[i]
             tpl += `
             <li>
-                <a href="./movieDetails.html?movieId=${mov.id}" class="external">
+                <a href="${$.url.movDetails}${mov.id}" class="external">
                     <img src="${mov.poster}" />
                     <p class="name">${mov.updateStatus == 0 ? '更新中' : '已完结'}</p>
                     <p class="text">${mov.introduction}</p>
@@ -77,6 +76,7 @@ $(function () {
     function initMain(res) {
         $('.recommended-2 a').each((i, el) => {
             let $el = $(el)
+            $el.attr('href', $.url.artDetails + res[i].id)
             $el.find('img').attr('src', res[i].pictrueUrl)
             $el.find('.titleInfo').text(res[i].title)
             $el.find('.content-text').text(res[i].introduction)
@@ -90,7 +90,7 @@ $(function () {
             let mov = res[i]
             tpl += `
             <li>
-                <a class="external flexlist" href="./movieDetails.html?movieId=${mov.id}">
+                <a class="external flexlist" href="${$.url.movDetails}${mov.id}">
                     <div class="imgbox">
                         <img src="${mov.poster}" alt="">
                     </div>
@@ -116,7 +116,7 @@ $(function () {
                 let d = data[0]
                 tpl += `
                 <li>
-                    <a class="external flexlist" href="./movieDetails.html?movieId=${d.id}">
+                    <a class="external flexlist" href="${$.url.movDetails}${d.id}">
                         <div class="imgbox">
                             <img src="${d.poster}" alt="">
                         </div>
@@ -207,7 +207,7 @@ $(function () {
                             let index = mov.id < 10 ? '0' + mov.id : mov.id
                             listTpl += `
                             <li>
-                                <a class="external flexlist" href="./movieDetails.html?movieId=${mov.id}">
+                                <a class="external flexlist" href="${$.url.movDetails}${mov.id}">
                                     <div class="imgbox">
                                         <img src="${mov.poster}" />
                                     </div>

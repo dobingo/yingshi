@@ -1,3 +1,8 @@
+$.url = {
+    movDetails: `./movieDetails.html?movieId=`,
+    artDetails: `./articleDetails.html?articleId=`
+}
+
 $.msg = function (opts, timeout) {
     let text = opts.text || opts
     let title = opts.title || '温馨提示'
