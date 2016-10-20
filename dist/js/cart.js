@@ -28,24 +28,24 @@ $(function () {
     });
 
     // 编辑状态
-
     $('.edit').click(function () {
         editMode = !editMode;
         if (editMode) {
             $(this).text('完成');
             $('.deleteAll').show();
             $('.pay').hide();
-            $('.delete').addClass('show');
+            // $('.delete').addClass('show')
         } else {
             $(this).text('编辑');
             $('.deleteAll').hide();
             $('.pay').show();
-            $('.delete').removeClass('show');
+            // $('.delete').removeClass('show')
         }
     });
 
     // 刷新操作按钮状态
     function changeBtnStatus() {
+        hasSelect = false;
         $('.select').each(function (i, el) {
             if ($(el).prop('checked')) {
                 hasSelect = true;
@@ -73,12 +73,20 @@ $(function () {
         deleteEmpty();
     });
 
-    // 全部删完
+    // 全部删完后设置购物车空状态
     function deleteEmpty() {
         var $list = $('.list>li');
         if ($list.length == 0) {
             $('.list,.tools,.edit').hide();
         }
     }
+
+    // 触摸滑动事件
+    // 左滑 显示单个删除
+    $('.list>li').swipeLeft(function () {
+        $(this).find('.delete').addClass('show');
+    }).swipeRight(function () {
+        $(this).find('.delete').removeClass('show');
+    });
 });
 //# sourceMappingURL=cart.js.map
