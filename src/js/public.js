@@ -6,13 +6,16 @@ $.url = {
 $.msg = function (opts, timeout) {
     let text = opts.text || opts
     let title = opts.title || '温馨提示'
-    timeout = opts.timeout || 2000
+
+    if (timeout === undefined) {
+        timeout = opts.timeout || 2000
+    }
 
     let $tpl = $(`
         <div class="mask">
             <div class="msg">
                 <p class="msg-title">${title}</p>
-                <span class="msg-text">${text}</span>
+                <p class="msg-text">${text}</p>
             </div>
         </div>
     `);
@@ -29,10 +32,10 @@ $.msg = function (opts, timeout) {
 
 
 // 影视详情绑定
-$(document).on('click','.getMovie',function(){
+$(document).on('click', '.getMovie', function () {
     function _updateDetailsPage(res) {
         let $page = $('.movieDetails')
-        $page.find('.pic').attr('src',res.MOVIE.poster)
+        $page.find('.pic').attr('src', res.MOVIE.poster)
     }
 
     let $this = $(this)

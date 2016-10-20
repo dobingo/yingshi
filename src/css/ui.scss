@@ -7,6 +7,7 @@
 // 20px = 1rem
 // reset sui
 body {
+    font-family: 'PingFangSC-Regular';
     .mask {
         position: absolute;
         top: 0;
@@ -34,6 +35,7 @@ body {
             .msg-text {
                 font-size: .6rem;
                 margin: 0;
+                text-align: center;
             }
         }
     }
@@ -113,12 +115,27 @@ a {
     }
 }
 
-// 分割线
+// 分割线 - 用dom占位
 .line {
     margin-left: rem(16px);
     width: 100%;
     height: 1px;
     background: #ddd;
+}
+
+// 分割线 - 伪元素
+.splitline{
+    position: relative;
+    border-bottom: 0;
+    &:after{
+        content: '';
+        position: absolute;
+        left: rem(14px);
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: #ddd;
+    }
 }
 
 // 复选框
