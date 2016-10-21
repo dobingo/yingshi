@@ -56,7 +56,7 @@ gulp.task('sass', function () {
     gulp.src(paths.sass.entry)
         .pipe($.sourcemaps.init())
         .pipe($.sass().on('error', $.sass.logError))
-        .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe($.autoprefixer('last 2 version', 'android 4'))
         .pipe($.sourcemaps.write('./'))
         // .pipe(spriter({
         //     // The path and file name of where we will save the sprite sheet
