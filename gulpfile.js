@@ -58,13 +58,13 @@ gulp.task('sass', function () {
         .pipe($.sass().on('error', $.sass.logError))
         .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe($.sourcemaps.write('./'))
-        .pipe(spriter({
-            // The path and file name of where we will save the sprite sheet
-            'spriteSheet': './dist/images/spritesheet.png',
-            // Because we don't know where you will end up saving the CSS file at this point in the pipe,
-            // we need a litle help identifying where it will be.
-            'pathToSpriteSheetFromCSS': '../images/spritesheet.png'
-        }))
+        // .pipe(spriter({
+        //     // The path and file name of where we will save the sprite sheet
+        //     'spriteSheet': './dist/images/spritesheet.png',
+        //     // Because we don't know where you will end up saving the CSS file at this point in the pipe,
+        //     // we need a litle help identifying where it will be.
+        //     'pathToSpriteSheetFromCSS': '../images/spritesheet.png'
+        // }))
         .pipe(gulp.dest('./dist/css/'))
         .pipe(reload({
             stream: true
