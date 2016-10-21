@@ -1,0 +1,85 @@
+.profit {
+    .con1 {
+        background: $ui-color-red;
+        color: white;
+    }
+    .top {
+        .headerTools {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 rem(12px);
+            span {
+                font-size: rem(14px);
+            }
+            >* {
+                position: relative;
+            }
+            img {
+                width: rem(28px);
+                height: rem(28px);
+                border-radius: 50%;
+                border: 2px solid white;
+            }
+        }
+    }
+    .center {
+        height: rem(106px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: rem(16px);
+        margin-bottom: rem(16px);
+        >* {
+            margin: 0;
+            padding: 0;
+        }
+        .total {
+            font-size: rem(36px);
+        }
+        .span1 {
+            font-size: rem(14px);
+        }
+        .span3 {
+            font-size: rem(12px);
+            color: rgba($color: white, $alpha: .7);
+        }
+    }
+    .bottom {
+        height: rem(55px);
+        display: flex;
+        align-items: stretch;
+        background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%);
+        .childPageEnter {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &:after{
+                content:'';
+                height: rem(24px);
+                width: 1px;
+                background: rgba($color: white, $alpha: .5);
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:last-of-type{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+        .num {
+            font-size: rem(14px);
+        }
+        .name {
+            font-size: rem(12px);
+            color: rgba($color: white, $alpha: .7);
+        }
+    }
+}

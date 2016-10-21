@@ -1,13 +1,13 @@
 // ------ public ------
 $ui-color:#FF9800;
+$ui-color-red:#F36C60;
 $ui-color-dark1: rgba(0, 0, 0, 0.87);
 $ui-color-dark2: rgba(0, 0, 0, 0.54);
 $ui-color-dark3: rgba(0, 0, 0, 0.38);
-$ui-color-disabled: rgba($color:black,$alpha:.24);
-
+$ui-color-disabled: rgba($color:black, $alpha:.24);
 // 单位转换
 @function rem($px) {
-  @return $px / 20px * 1rem;
+    @return $px / 20px * 1rem;
 }
 
 // 文本溢出样式，clamp到多少行溢出时显示缩略字符
@@ -27,6 +27,6 @@ $ui-color-disabled: rgba($color:black,$alpha:.24);
 }
 
 // boxshaow-bottom
-@mixin box-shadow-bottom{
+@mixin box-shadow-bottom {
     box-shadow: 0 1px 1px rgba($color: black, $alpha: .1);
 }

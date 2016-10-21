@@ -41,11 +41,11 @@
                     </div>
                 </div>
                 <div class="line"></div>
-                <div class="alist">
+                <a class="alist" href="#page-profit">
                     <i class="fa fa-bar-chart ico"></i>
                     <span class="name">收益明细</span>
                     <span class="name2">查看各级推客贡献</span>
-                </div>
+                </a>
                 <div class="line"></div>
                 <div class="alist noarrow">
                     <a href="#page-charge" class="btn border-right">
@@ -93,15 +93,23 @@
     </div>
 
     <div class="page" id="page-withdraw">
+        <!--提现-->
         {%include './withdraw.html'%}
     </div>
 
     <div class="page" id="page-charge">
+        <!--充值-->
         {%include './charge.html'%}
     </div>
 
     <div class="page" id="page-qrcode">
+        <!--二维码-->
         {%include './qrcode.html'%}
+    </div>
+
+    <div class="page" id="page-profit">
+        <!--收益明细-->
+        {%include './profit.html'%}
     </div>
 
 </div>
