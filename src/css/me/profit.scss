@@ -2,84 +2,250 @@
     .con1 {
         background: $ui-color-red;
         color: white;
-    }
-    .top {
-        .headerTools {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 rem(12px);
-            span {
-                font-size: rem(14px);
-            }
-            >* {
-                position: relative;
-            }
-            img {
-                width: rem(28px);
-                height: rem(28px);
-                border-radius: 50%;
-                border: 2px solid white;
-            }
-        }
-    }
-    .center {
-        height: rem(106px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: rem(16px);
-        margin-bottom: rem(16px);
-        >* {
-            margin: 0;
-            padding: 0;
-        }
-        .total {
-            font-size: rem(36px);
-        }
-        .span1 {
-            font-size: rem(14px);
-        }
-        .span3 {
-            font-size: rem(12px);
-            color: rgba($color: white, $alpha: .7);
-        }
-    }
-    .bottom {
-        height: rem(55px);
-        display: flex;
-        align-items: stretch;
-        background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%);
-        .childPageEnter {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            &:after{
-                content:'';
-                height: rem(24px);
-                width: 1px;
-                background: rgba($color: white, $alpha: .5);
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            &:last-of-type{
-                &:after{
-                    display: none;
+        .top {
+            .headerTools {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 rem(12px);
+                span {
+                    font-size: rem(14px);
+                }
+                >* {
+                    position: relative;
+                }
+                img {
+                    width: rem(28px);
+                    height: rem(28px);
+                    border-radius: 50%;
+                    border: 2px solid white;
                 }
             }
         }
-        .num {
-            font-size: rem(14px);
+        .center {
+            height: rem(106px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: rem(16px);
+            margin-bottom: rem(16px);
+            >* {
+                margin: 0;
+                padding: 0;
+            }
+            .total {
+                font-size: rem(36px);
+            }
+            .span1 {
+                font-size: rem(14px);
+            }
+            .span3 {
+                font-size: rem(12px);
+                color: rgba($color: white, $alpha: .7);
+            }
         }
-        .name {
-            font-size: rem(12px);
-            color: rgba($color: white, $alpha: .7);
+        .bottom {
+            height: rem(55px);
+            display: flex;
+            align-items: stretch;
+            background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%);
+            >a {
+                color: white;
+            }
+            .childPageEnter {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                &:after {
+                    content: '';
+                    height: rem(24px);
+                    width: 1px;
+                    background: rgba($color: white, $alpha: .5);
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:last-of-type {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            .num {
+                font-size: rem(14px);
+            }
+            .name {
+                font-size: rem(12px);
+                color: rgba($color: white, $alpha: .7);
+            }
+        }
+    }
+    .con2 {
+        @mixin ball($color) {
+            .date {
+                &:before {
+                    content: '';
+                    width: rem(8px);
+                    height: rem(8px);
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translate3d(rem(3px), -50%, 0);
+                    background: $color;
+                    z-index: 1;
+                }
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0, 0, 0, 0.08);
+                    z-index: 0;
+                }
+            }
+        }
+        .list {
+            border-bottom: $ui-border;
+            li {
+                display: flex;
+                justify-content: flex-start;
+                height: rem(56px);
+                &.one {
+                    @include ball($ui-color);
+                }
+                &.two {
+                    @include ball(#FFC107);
+                }
+                &.three {
+                    @include ball(#03A9F4);
+                }
+                &.other {
+                    @include ball(#8BC34A);
+                }
+                &:first-of-type {
+                    .date:after {
+                        height: 50%;
+                        bottom: 0;
+                    }
+                }
+                &:last-of-type {
+                    .info {
+                        border: 0;
+                    }
+                }
+            }
+            .date {
+                position: relative;
+                width: rem(76px);
+                height: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .day {
+                    font-size: rem(14px);
+                }
+                .time {
+                    font-size: rem(12px);
+                    color: $ui-color-dark2;
+                }
+            }
+            .info {
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                position: relative;
+                border-bottom: $ui-border;
+                margin-left: rem(16px);
+                flex-grow: 1;
+                img {
+                    width: rem(40px);
+                    height: rem(40px);
+                    border-radius: 50%;
+                    margin-right: rem(8px);
+                }
+                .i2 {
+                    font-size: rem(14px);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .num {
+                        color: $ui-color-red;
+                    }
+                    .text {
+                        color: $ui-color-dark2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#page-profit-1 {
+    .con1 {
+        background: $ui-color;
+    }
+    .level{
+        &:after{
+            content: '一'
+        }
+    }
+}
+
+#page-profit-2 {
+    .con1 {
+        background: #FFC107;
+    }
+    .level{
+        &:after{
+            content: '二'
+        }
+    }
+}
+
+#page-profit-3 {
+    .con1 {
+        background: #00BCD4;
+    }
+    .level{
+        &:after{
+            content: '三'
+        }
+    }
+}
+
+.profit-in {
+    .con1 {
+        padding-bottom: rem(16px);
+    }
+    .con2 {
+        .Title {
+            font-size: rem(14px);
+            padding: rem(15px) rem(16px);
+            margin: 0;
+        }
+        .text{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            padding-right: rem(16px);
+            .name{
+                font-size: rem(14px);
+            }
+            .num{
+                color:$ui-color-red;
+                font-size: rem(12px);
+            }
         }
     }
 }

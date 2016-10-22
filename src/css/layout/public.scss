@@ -5,6 +5,7 @@ $ui-color-dark1: rgba(0, 0, 0, 0.87);
 $ui-color-dark2: rgba(0, 0, 0, 0.54);
 $ui-color-dark3: rgba(0, 0, 0, 0.38);
 $ui-color-disabled: rgba($color:black, $alpha:.24);
+$ui-border: 1px solid #ddd;
 // 单位转换
 @function rem($px) {
     @return $px / 20px * 1rem;
